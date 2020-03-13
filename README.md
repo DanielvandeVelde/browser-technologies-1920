@@ -1,141 +1,231 @@
-# Browser Technologies @cmda-minor-web 1920
-//Robuuste, toegankelijke websites ontwerpen en maken …
+# Browser Technologies
 
-In het vak Browser Technologies leer je hoe je goede, robuuste, toegankelijke websites maakt. Je gaat leren over Progressive Enhancement, Feature Detection en Fallback. Het web is er voor iedereen. In dit vak leer je hoe je daarvoor kan zorgen.
+## Inleiding
 
-Een van de mooiste principes van het web is dat het er echt is voor iedereen. Iedereen met een computer en een browser moet gebruik kunnen maken van het web. Het web is geen gecontroleerde (programmeer) omgeving. Je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij ziet in jouw browser. Er zijn natuurlijk de technische beperkingen. Zoals - Afmetingen van de browser - Grootte van het apparaat - Manier van interactie - Kwaliteit van de hardware - Kwaliteit van het netwerk. En er zijn mensen. Allemaal verschillende mensen ... Hoe zorg je er dan voor dat websites het altijd doen?
+Dit is de plek waar ik de uitwerkingen van de verscheidene opdrachten van Browser Technologies plaats.  
+Alle testen die ik uitvoer vinden plaats op een Windows computer met Google Chrome.  
 
-## Leerdoelen
-- _Wat is Progressive enhancement en hoe kun je dit toepassen._
-- _Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund._
-- _Leren een Browser Technologies onderzoeken, testen en implementeren als enhancement._
+## Inhoudsopgave
 
-[Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/edit?usp=sharing)
+1. [Opdracht 1.1](#1-opdracht-11)
+2. [Opdracht 1.2](#2-opdracht-12)
 
-## Planning
+## 1. Opdracht 1.1
 
-| Planning  | Woensdag  |  Donderdag | Vrijdag  |
-|---|---|---|---|
-| <a href=#week-1>Week 1</a>  | Introductie, College over Progressive enhancement + briefing opdracht 1.1 | College Browser detect + presentaties opdracht 1.1 + briefing opdracht 1.2 Fork je OBA  | Feedbackgesprekken + Bowlen! |
-| <a href=#week-2>Week 2</a>  | College Feature detect + Briefing opdracht 2  | College Browsers + werken aan de opdracht | Feedbackgesprekken  |
-| <a href=#week-3>Week 3</a>  | College Notificaties + werken aan de opdracht  |  Werken aan de opdracht | Beoordelingsgesprekken  |
+### Afbeeldingen
 
+Afbeeldingen kunnen om verschillende redenen niet werken.  
+Zo kan het zijn dat de gebruiker slecht internet heeft en daarom de afbeeldingen niet snel of goed inladen.   
+Tevens kan de gebruiker ook last hebben van een firewall die deze afbeeldingen blokeren.   
+Soms staan afbeeldingen in de CSS en wanneer deze niet goed geladen worden falen de afbeeldingen ook.  
+Er zijn verschillende plug-ins die afbeeldingen kunnen blokkeren.   
+De gebruiker kan natuurlijk ook slechtziend of blind zijn en gebruik maken van een screenreader. In dit geval zijn afbeeldingen an sich niet genoeg.  
+De server waar de plaatjes op staan kan soms ook niet bereikbaar zijn, of providers kunnen rommelen met het optimaliseren van afbeeldingen die binnenkomen.   
+De gebruiker kan natuurlijk ook zelf de afbeeldingen uit zetten in zijn of haar browser.  
 
+Afbeeldingen zijn in verschillende browsers op andere manieren uit te zetten. 
+- Firefox: `about:config` > `permission.default.image` > All images
+- Chrome: Settings > Advanced > Content Settings > Do not show any images
+- Safari: Develop > Disable Images
 
-## Programma
+#### Marktplaats
 
-### Week 1
-Het web is voor iedereen. Leren over Progressive enhancement en kennismaken met testen en het device lab. [Planning week 1](./slides/Week1.png)
+<kbd>![Marktplaats](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/IMG%20Marktplaats.png "Marktplaats")</kbd>
 
-#### Woensdag
-- [Les 1 - Progressive enhancement & Briefing Opdracht 1.1](./slides/BT1920%20College%20Les1%20-%20Progressive%20Enhancement.pdf)
-- [Opdracht 1.1 - Breek het web](Opdracht1.1.md)
+Marktplaats zonder afbeeldingen houdt aardig z’n vorm.  
+Hier zouden makkelijk alt-texten kunnen staan met daarbij de titels of beschrijving.  
+Advertenties laden echter wel gewoon.  
+Natuurlijk zijn afbeeldingen erg belangrijk voor een website zoals Marktplaats, hier gaan ze naar mijn mening matig mee om.
 
-#### Weekly Nerd
-Sanne 't Hooft over Interactie. Woensdag 11 Maart, 16:00 in het minorlokaal.
+#### NOS
 
-#### Donderdag
-- [Les 2 - Features testen & Briefing opdracht 1.2](./slides/BT1920%20College%20Les2%20-%20Progressive%20Enhancement.pdf)
-- [Opdracht 1.2 - Fork je OBA](Opdracht1.2.md)
+<kbd>![NOS](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/IMG%20NOS.png "NOS")</kbd>
 
-Deze les gaan we onderstaande artikelen bespreken:
-- [Everyone has JavaScript, right? by Stuart Langridge](https://kryogenix.org/code/browser/everyonehasjs.html)
-- [The Web I Want by Chris James](https://dev.to/quii/the-web-i-want-43o)
+De NOS zonder afbeeldingen is absoluut niet storend.  
+Zonder de afbeeldingen mis je amper functionaliteit.  
+Bepaalde dingen zijn niet volledig netjes uitgelijnd, bepaalde tags zijn blanco, maar niets storends.
 
+#### YouTube
 
-#### Vrijdag
-Feedbackgesprekken opdracht 1.2 in groepjes, met studentassistenten en docenten.
+<kbd>![YouTube](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/IMG%20YouTube.png "YouTube")</kbd>
 
-Deze les gaan we onderstaand artikel bespreken:
-- [Lezen: Understanding Progressive Enhancement by Aaron Gustafson](https://alistapart.com/article/understandingprogressiveenhancement)
+YouTube heeft een goede oplossing gevonden.  
+Hier maken zij namelijk gebruik van in-line .svg.  
+Op deze manier laden alle/de meeste iconen zowel als hun logo uitstekend met de html mee.  
+Ook al staan de afbeeldingen misschien uit.
 
+### Javascript
 
+Er zijn veel verschillende redenen waarom Javascript niet werkt.
+Sommige gebruikers hebben javascript uitstaan, of blokkeren sommige javascript.  
+Dit kan bijvoorbeeld door een ad-blocker of noscript browser plug-in.  
+Ongeveer 0.2% van de gebruikers heeft Javascript uit staan.  
+1% van de requests om Javascript op te halen falen. 
+En zelf giganten zoals Amazon webserver zijn wel eens niet bereikbaar en dan kan de Javascript niet geladen worden.  
+Wat af en toe heel logisch en simpel lijkt, zoals de Wordpress WYSIWYG editor is zonder Javascript niet beschikbaar.  
+> “All your users are non-JS while they’re downloading your JS.”   
+     **- Jake Archibald**
 
+#### 9292
 
+<kbd>![9292](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/JS%209292.png "9292")</kbd>
 
-### Week 2
-Wat laat je zien als een browser of gebruiker een 'enhancement' niet kan tonen of zien? Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund? [Planning week 2](./slides/Week2.png)
+Omdat er geen Javascript is, is het onmogelijk om een route te plannen via 9292.  
+Ze laten je echter gewoon alles invullen (zonder autocomplete) en geven je (nadat je op ‘plan reis’ klikt) een 500 statuscode melding (Internal Server Error)  
 
-#### Woensdag
-- [Les 3 - Over Feature detect & Briefing opdracht 2]()
-- [Opdracht 2 - Progressive Enhanced Browser Technologie](Opdracht2.md)
+#### Bijenkorf 
 
-Deze les gaan we onderstaande artikelen bespreken:
-- [HTML: The Inaccessible Parts](https://daverupert.com/2020/02/html-the-inaccessible-parts/)
-- [Accessibility Through Semantic HTML by Laura Kalbag](https://24ways.org/2017/accessibility-through-semantic-html/)
+<kbd>![Bijenkorf](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/JS%20Bijenkorf.png "Bijenkorf")</kbd>
 
+De Bijenkorf zonder Javascript zorgt er voor dat de gallerij onmogelijk te bedienen is.  
+De afbeeldingen worden niet geladen en de knoppen werken niet.  
+Dit kan natuurlijk makkelijk verholpen worden door alle afbeeldingen in te laden zowel als een scrollbalk.  
+De gebruiker kan dan gewoon door de afbeeldingen heen scrollen.  
+Deze kan je vervolgens  met Javascript te verstoppen en te vervangen met deze wat nettere optie van knoppen en kleine afbeeldingen.  
 
-#### Weekly Nerd
-PE bij de Voorhoede.
+#### Blokker
 
+<kbd>![Blokker](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/JS%20Blokker.png "Blokker")</kbd>
 
-#### Donderdag
-- [Les 4 - Over Browsers]()
+Wanneer er op het winkelmandje gedrukt word verschijnt er niets.  
+Helemaal niets.  
+Natuurlijk is het hebben van wat placeholder content wel zo handig.  
+Dit zouden zij kunnen doen door alvast een container te hebben met hier informatie er in, zoals ‘geen artikelen’ of ‘winkelmandje kan niet worden opgehaald’ en vervolgens deze met Javascript vervangen wanneer dit kan.  
 
-Deze les gaan we onderstaande artikelen bespreken:
-- [The accessibility mindset by Eric Eggert](https://24ways.org/2015/the-accessibility-mindset/)
-- [The Role of Enhancement in Web Design by Raluca Budiu / Nielsen Norman Group](https://www.nngroup.com/articles/enhancement/)
+#### Buienradar  
 
+<kbd>![Buienradar](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/JS%20Buienradar.png "Buienradar")</kbd>
 
-#### Vrijdag
-Code review en feedbackgesprekken opdracht 2.
+Buienradar gaat aardig goed om met het niet hebben van Javascript.  
+Er wordt enkel de eerste afbeelding ingeladen met de huidige tijd, deze hebben zij dus altijd klaar staan en wordt niet later met Javascript opgehaald.  
+Hoewel de functionaliteit zoals de slider om het tijdstip te veranderen niet werkt, is het hebben van een indicatie door te zien wat de huidige weerssituatie is wel gewenst.  
+Tevens heb je wel de mogelijkheid om de +3 en +24 uur situatie te zien.  
+Het precieze scrubben naar een tijdstip of het hebben van een .gif animatie is er echter niet.  
 
+#### Google  
 
+<kbd>![Google](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/JS%20google.png "Google")</kbd>
 
+Verassend genoeg is Google zonder Javascript de circa 2011 Google.  
+Alle knoppen en opties zijn er, in mijn mening overzichtelijker door de zwarte balk aangezien ze niet achter een extra klik zitten.  
+Tevens is het zij-menu ook erg overzichtelijk, wederom omdat het geen opties verstopt.  
+Misschien geen gek idee om Javascript uit te hebben staan op Google.  
+ 
+#### HvA   
 
-### Week 3
-Deze week werken we verder aan opdracht 2. [Planning week 3](./slides/Week3.png)
+<kbd>![HvA](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/JS%20HVA.png "HvA")</kbd>
 
+De HvA is aardig goed met Progressive Enhancements.  
+In plaats van bijvoorbeeld `<details>` te gebruiker (wat niet werkt op IE/Edge/Safari iOS trouwens) kiezen zij er voor om een <a> link te hebben waar je op moet klikken om de informatie te zien/uit te vouwen.  
+Ik was dus erg geinteresseerd om te zien of deze informatie verborgen zou zijn als je Javascript uit heb staan.  
+Tot mijn verassing is dit niet het geval, het verstoppen van de content wordt dus met Javascript gedaan zodat dit enkel gebeurd wanneer je ook Javascript heb om het weer te tonen.   
+Dat is progressive Enhancement!   
 
-#### Woensdag
-- [Les 5 - Over Notificaties]()
+#### Thuisbezorgd
 
-Deze les gaan we onderstaande artikelen bespreken:
-- [Progressive Enhancement and Data Visualizations by Chris Coyier](https://css-tricks.com/progressive-enhancement-data-visualizations/)
-- [Make the Web Work For Everyone by Justin Crawford, Chris Mills, Ali Spivak](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/)
+<kbd>![Thuisbezorgd](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/JS%20Thuisbezorgd.png "Thuisbezorgd")</kbd>
 
+Thuisbezorgd is niets zonder Javascript.   
+De achtergrond afbeelding laadt niet in en het zoeken word gewoon genegeerd.   
+Het was te verwachten, maar het is toch zonde.
 
-#### Weekly Nerd
-Op bezoek bij Bol.com
+#### YouTube 
 
+<kbd>![YouTube](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/JS%20YouTube.png "YouTube")</kbd>
 
-#### Donderdag
-Verder werken aan opdracht 2
+Een groot skelet.  
+Waarschijnlijk omdat advertenties e.d. geleverd worden door middel van Javascript werkt heel YouTube niet zonder.  
+Dit gaat dus niet meer om Progressive Enhancement maar meer over het leveren van een dienst, en dat je niet wilt dat mensen die dienst afnemen zonder te ‘betalen’  
+HTML5 `<video>` is overigens uitstekend. Dit heeft ook een ingebouwde manier om een boodschap te leveren als iemand geen HMTL5 supporting browser heeft.  
+Het `<video>` element kan zelfs door middel van Javascript gespeeld, gepauzeerd, groter (of kleiner, preload, muted, loop etc.) worden gemaakt. 
 
 
 
-#### Vrijdag
-Code review en beoordelingsgesprekken opdracht 2.
+## 2. Opdracht 1.2
 
+### Inleiding
 
+Voor deze applicatie heb ik mijn WAFS opdracht bekeken.  
+Waar ik wijzigingen kon maken heb ik dat natuurlijk gedaan, wanneer dit niet mogelijk was staat dit nog in de Todo beschreven die aan het eind van deze 8 features te vinden is.
+De nieuwe variant met de wijzigingen zal ik binnenkort doorvoeren in m'n progressive web app.
 
+### Afbeeldingen
 
+Afbeeldingen mogen iets kleiner zijn tom er voor te zorgen dat deze sneller laden.
+Verder is het niet een heel groot probleem dat ik gebruik maak van een enkele achtergrond afbeelding.
 
+### Custom Fonts
 
+Ik maak gebruik van Roboto die ik inlaad door middel van de CSS.
+Anders gaat deze over op een sans-serif of de default van de browser.
+In principe dus niet een heel groot drama, gelukkig maar!
 
+### Kleur
 
+Ik dacht dat kleur mogelijk een probleem zou kunnen worden.  
+De pagina zoals ik hem heb gemaakt is vrij donker.  
+Hoewel ik dacht dat het in principe goed zichtbaar was zijn de zwarte teksten in het hoofdonderdeel van de homepagina, zowel als de groen en rode teksten volgende de Google Chrome Audit niet goed leesbaar.  
+Ik zal dus even goed moeten kijken of ik de achtergrondkleur lichter kan maken en het contrast tussen deze twee kan verhogen.
+Dit zal ook gelijk de leesbaarheid van de pagina verhogen.
 
+### Muis/Trackpad
 
+Ik had meerdere problemen met het navigeren door mijn applicatie met gebruik van een trackpad of de tab-functionaliteit.  
+De `:focus`-state van het zoek/inputveld bovenaan de pagina is de enige die goed zichtbaar is op Firefox.
+Chrome zet hier netjes een blauwe rand omheen, maar in standaard Firefox is dit iets waar ik aan kan werken.
+Ik heb op de lijstitems wel een `:hover` op staan, wat maar eens bewijst dat ik absoluut niet heb nagedacht over accesibility en enkel over de muis.
 
+### Breedband
 
+De afbeeldingen zouden kleiner kunnen worden gemaakt.  
+Niet alleen gebruik ik niet de volledige achtergrond afbeelding maar deze is ook nog eens veels te groot, en zou zeker kleiner kunnen worden gemaakt.
+Ook kan ik alle Javascript-bestanden en CSS-bestanden minifyen, uglifyen en/of compressen. op deze manier maak ik de website een stuk sneller voor mensen met minder snel internet.  
 
+### Javascript
 
+De applicatie features werken *niet* zonder Javascript.
+Natuurlijk is het mogelijk om alle Javascript serverside te houden maar zelfs dan loop ik tegen restricties.
+Ik zou dus alles voor de hoofdpagina op de server kunnen ophalen en vervolgens serveren.
+De grafieken die ik maak op de detailpagina zijn echter `<canvas>` elementen dus dit zou op een andere manier moeten. 
+De eerste oplossing die ik hier voor kan verzinnen is van de grafiek een `<svg>` te maken of om een andere manier een afbeelding te creeeren die ik kan plaatsen op de pagina.
 
+### Cookies
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+Ik maak geen gebruik van cookies, misschien zou ik dit wel kunnen doen voor het wisselen van pagina's.
 
-<!-- ☝️ replace this description with a description of your own work -->
+### Localstorage
+ 
+Ik maak gebruik van localStorage maar meer omdat dit een requirement was van de Web-App-From-Scratch opdracht.
+Persoonlijk zou ik deze het liefst aanpassen of volledig weghalen.
+ 
+### Device Lab
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+Op mobiel is mijn website momenteel __veels__ te klein.
+Ik ben onder de indruk hoe moeilijk het is om op de verschillende knoppen te drukken van niet alleen de navigatiebalk boven aan de pagina, maar ook de verschillende items in de lijst zelf.
+Dit is iets waar ik even goed naar moet kijken en desnoods moet oplossen met mediaqueries.
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+### Screenreader
 
-<!-- Maybe a table of contents here? 📚 -->
+Het testen met de screenreader ging niet super goed.
+De verschillende lagen in de lijst met informatie er in die ik met een `<span>` gestijld staat maar gelukkig nog wel in de juiste volgorde word voorgelezen.
 
-<!-- How about a section that describes how to install this project? 🤓 -->
+### Overige accessibility
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
+Mijn form-elementen hebben geen labels. Dit is best een interessante fout van mij. Tevens als het feit dat er geen clickable button is om te zoeken.
+De links om mijn list-items heen hebben geen naam. Dit is volgens de accesibility list ook iets wat aangepast moet worden.
+Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet correct is.
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+### Todo
+
+- [ ] Labels & buttons voor searchbar
+- [ ] Content voor de `<a>`-items
+- [ ] Geen `<ul>` in de `<li>`'s 
+- [ ] afbeeldingen omgezet naar .svg voor sneller laden (ook lokaal hosten)
+- [ ] Kleiner CSS-bestand zodat afbeeldingen e.d. sneller worden geladen
+- [ ] Contrast verhoogt tussen achtergrond- en textkleuren
+- [ ] Minified css
+- [ ] Mobile-friendly
+- [ ] :focus-state duidelijker maken (mogelijk hetzelfde als :hover)
+- [ ] prebuilden van minify/uglify en compression van bestanden
+- [ ] fallback voor geen javascript
