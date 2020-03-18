@@ -12,6 +12,9 @@ Alle testen die ik uitvoer vinden plaats op een Windows computer met Google Chro
 
 ## 1. Opdracht 1.1
 
+<details>
+<summary>Uitwerking opdracht 1.1</summary>
+
 ### Afbeeldingen
 
 Afbeeldingen kunnen om verschillende redenen niet werken.  
@@ -142,7 +145,12 @@ Dit gaat dus niet meer om Progressive Enhancement maar meer over het leveren van
 HTML5 `<video>` is overigens uitstekend. Dit heeft ook een ingebouwde manier om een boodschap te leveren als iemand geen HMTL5 supporting browser heeft.  
 Het `<video>` element kan zelfs door middel van Javascript gespeeld, gepauzeerd, groter (of kleiner, preload, muted, loop etc.) worden gemaakt.
 
+</details>
+
 ## 2. Opdracht 1.2
+
+<details>
+<summary>Opdracht 1.2 uitwerking</summary>
 
 ### Inleiding
 
@@ -230,7 +238,12 @@ Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet cor
 - [ ] prebuilden van minify/uglify en compression van bestanden
 - [ ] fallback voor geen javascript
 
+</details>
+
 ## Opdracht 2
+
+<details>
+<summary>Opdracht 2 uitwerking </summary>
 
 ### Use case
 
@@ -245,3 +258,5 @@ Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet cor
 ### HTML / CSS / Javascript
 
 <kbd>![CSS+Javascript](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/UC%203.png "CSS+Javascript")</kbd>
+
+</details>
