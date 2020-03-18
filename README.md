@@ -229,3 +229,19 @@ Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet cor
 - [ ] :focus-state duidelijker maken (mogelijk hetzelfde als :hover)
 - [ ] prebuilden van minify/uglify en compression van bestanden
 - [ ] fallback voor geen javascript
+
+## Opdracht 2
+
+### Use case
+
+2. Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, printen, opslaan en een volgende keer dat ik de site bezoek kunnen gebruiken.
+
+### HTML
+
+<kbd>![Puur HTML](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/UC%201.png "Puur HTML")</kbd>
+
+### CSS
+
+### HTML / CSS / Javascript
+
+<kbd>![CSS+Javascript](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/UC%203.png "CSS+Javascript")</kbd>
