@@ -12,7 +12,7 @@
 <p>You have created this shirt:</p>
 <ul>
 <% if(queries.shirtColor) { %>
-	<li>The shirt has the hex color: <%= queries.shirtColor %></li>
+	<li>The shirt has the color: <%= queries.shirtColor %></li>
 <% } %>
 <% if(queries.shirtNeck == "v") { %>
 	<li>Has a v-neck.</li>
@@ -21,11 +21,11 @@
 <% } %>
 <% if(queries.shirtText) { %>
 	<li>Has the text: "<%= queries.shirtText %>" on it.</li>
-	<li>The text has the hex color: <%= queries.textColor %></li>
+	<li>The text has the color: <%= queries.textColor %></li>
 <% } %>
 <% if(queries.shirtPattern) { %>
 	<li>Has a <%= queries.shirtPattern %> pattern on it.</li>
-	<li>The pattern has the hex color: <%= queries.patternColor %></li>
+	<li>The pattern has the color: <%= queries.patternColor %></li>
 <% } %>
 
 </ul>
