@@ -1,17 +1,43 @@
-<html>
-<head></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>T-shirt creator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 <body><main>
+  <h1>The t-shirt creator!</h1>
   <form>
-  <label>Type shirt:<br>
-  <label><input type="radio" name="shirtColor" value="black"  <% if (queries.shirtColor == "black") { %> checked <% } %> >Black</label>
-  <label><input type="radio" name="shirtColor" value="grey" <% if (queries.shirtColor == "grey") { %> checked <% } %> >Grey</label>
-  <label><input type="radio" name="shirtColor" value="blue" <% if (queries.shirtColor == "blue") { %> checked <% } %> >Blue</label>
-  </label><br><br><label>Hals:<br>
+    <fieldset>
+    <legend>T-shirt</legend>
+  <label>Shirt color<br>
+  <label><input type="color" name="shirtColor" value="<%= queries.shirtColor %>"/></label>
+</label><br><br><label>Neck type<br>
   <label><input type="radio" name="shirtNeck" value="v" <% if (queries.shirtNeck == "v") { %> checked <% } %> >V-neck</label>
   <label><input type="radio" name="shirtNeck" value="round" <% if (queries.shirtNeck == "round") { %> checked <% } %> >Round neck</label>
-</label><br><br><label>Text on shirt:<br>
-    <input type="text" name="shirtText" value="<%= queries.shirtText %>" placeholder="Text on shirt">
-  </label><br><br><input type="submit" value="Save" formaction="/"><input type="submit" value="Submit" formaction="/creator">
+  </label>
+  </fieldset>
+  <fieldset>
+  <legend>Customization</legend>
+  <label>Text on shirt:<br>
+  <input type="text" name="shirtText" value="<%= queries.shirtText %>" placeholder="Text on shirt">
+  </label>
+  <br><br>
+  <label>Pattern
+  <br>
+  <label><input type="radio" name="shirtPattern" value="dots"  <% if (queries.shirtPattern == "dots") { %> checked <% } %> >Dots</label>
+  <label><input type="radio" name="shirtPattern" value="vertical stripes" <% if (queries.shirtPattern == "vertical stripes") { %> checked <% } %> >Vertical stripes</label>
+  <label><input type="radio" name="shirtPattern" value="horizontal stripes" <% if (queries.shirtPattern == "horizontal stripes") { %> checked <% } %> >Horizontal stripes</label>
+  <br><br>
+  <label>
+    Pattern color
+  <br>
+  <label><input type="color" name="patternColor" value="<%= queries.patternColor %>"/></label>
+  </label>
+  </fieldset>
+  <br>
+  <input type="submit" value="Save" formaction="/">  <input type="submit" value="Submit" formaction="/creator">
 </form>
 </main></body>
 </html>
