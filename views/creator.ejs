@@ -10,7 +10,7 @@
 <% if(queries.shirtColor) { %>
 <li>The t-shirt is <%= queries.shirtColor %></li>
 <% } %>
-<% if(queries.shirtColor) { %>
+<% if(queries.shirtNeck) { %>
 <li>Has a <%= queries.shirtNeck %>-neck.</li>
 <% } %>
 <% if(queries.shirtText) { %>
@@ -19,13 +19,23 @@
 </ul>
 </main>
 <aside>
-	<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
-	<g>
-	  <title>Layer 1</title>
-	  <rect height="250" width="200" y="16.453125" x="97.5" fill="#000"/>
-	  <rect stroke="null" transform="rotate(59.536865234375 79.49259948730466,86.21015930175783) " height="107" width="100" y="32.710163" x="29.492602" fill="#000"/>
-	  <rect stroke="null" transform="rotate(-60 315.49261474609375,79.7101593017578) "  height="100" width="90" y="29.710163" x="270.492602" fill="#000"/>
-	 </g>
+	<svg width="400" height="275" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+		<mask id="cutNeck">
+			<rect width="400" height="275" fill="white"/>
+			<% if(queries.shirtNeck == "v") { %>
+			<rect  transform = "translate(40,-165) rotate(45 60 60)" width="75" height="75" y="25" x="175" fill="black"/>
+			<% } else {%>
+			<circle cy="0" cx="50%" r="50" fill="black"/>
+			<% } %>
+		</mask>
+		</defs>
+	  <rect height="250" width="200" y="16.453125" x="97.5" fill="<%= queries.shirtColor %>" mask="url(#cutNeck)"/>
+		<rect transform="rotate(59.536865234375 79.49259948730466,86.21015930175783) " height="100" width="90" y="32.710163" x="29.492602" fill="<%= queries.shirtColor %>"/>
+	  <rect transform="rotate(-60 315.49261474609375,79.7101593017578) "  height="100" width="90" y="29.710163" x="270.492602" fill="<%= queries.shirtColor %>"/>
+			<% if(queries.shirtText) { %>
+				<text fill="white" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle"><%= queries.shirtText %></text>
+			<% } %>
 	</svg>
 </aside>
 </body>
