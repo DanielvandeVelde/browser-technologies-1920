@@ -270,22 +270,31 @@ Op deze manier worden de ingevulde waardes gebruikt om een (afbeelding van een) 
 
 </details>
 
+#### Functies
+
+- Formulier invullen en opslaan (via URL)
+- Formulier opsturen naar server
+- Vanuit de server genereren van t-shirt
+- Opslaan van t-shirt-creator pagina om shirt te herladen
+- Veranderen van data in URL om shirt te veranderen
+
+En dat alles in puur HTML!
+
+#### Semantiek
+
 HTML is nu aardig semantisch en bovendien werkt de pure HTML versie uitstekend, waar ik best trots op ben.
 Hier en daar gebruik ik wat `<br>`-etjes om de html leesbaar te maken in plaats van een lange horizontale rij aan radiobuttons en input vakken.
 
-#### Hals & patroon-type
+#### Input types
 
-Dit zijn radio-buttons en worden dus gelukkig volledig ondersteund.
+De hals & patroon-type zijn radio-buttons en worden dus gelukkig volledig ondersteund door alle browsers.
 
-#### Shirt/text/patroon kleur
-
-`<input type="color"` [wordt niet door alles ondersteund](https://caniuse.com/#feat=mdn-html_elements_input_input-color).
-Als dit het gebal is dan wordt dit een `input type="text"`.
+De verschillende kleuren die geselecteerd worden gebruiken `type="color"`.  
+`<input type="color"` [wordt niet door alle browsers ondersteund](https://caniuse.com/#feat=mdn-html_elements_input_input-color).
+Als dit het geval is dan wordt dit een `input type="text"`.
 Color levert een kleur aan als hexidecimaal maar de `<svg>` accepteert ook html-kleuren.
 Wanneer iemand dus het text inputveld ziet en daar 'blue' of 'goldenrod' intypt werkt het dus nog allemaal prima.
 Als het echt niet word begrepen is de fallback zwart.
-
-#### Text
 
 Momenteel is de `input type="text"` prima.
 Wanneer er een te lange tekst wordt ingevuld dan loopt dit over het t-shirt heen.
