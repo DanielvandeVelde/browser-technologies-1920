@@ -12,7 +12,7 @@
 <p>You have created this shirt:</p>
 <ul>
 <% if(queries.shirtColor) { %>
-	<li>Has the hex color of: <%= queries.shirtColor %></li>
+	<li>The shirt has the hex color: <%= queries.shirtColor %></li>
 <% } %>
 <% if(queries.shirtNeck == "v") { %>
 	<li>Has a v-neck.</li>
@@ -21,10 +21,11 @@
 <% } %>
 <% if(queries.shirtText) { %>
 	<li>Has the text: "<%= queries.shirtText %>" on it.</li>
+	<li>The text has the hex color: <%= queries.textColor %></li>
 <% } %>
 <% if(queries.shirtPattern) { %>
 	<li>Has a <%= queries.shirtPattern %> pattern on it.</li>
-	<li>The pattern has the hex color: <%= queries.patternColor %>"</li>
+	<li>The pattern has the hex color: <%= queries.patternColor %></li>
 <% } %>
 
 </ul>
@@ -69,7 +70,7 @@
 			<circle cy="235" cx="115" r="10" fill="<%= queries.patternColor %>"/>
 		<% } %>
 		<% if(queries.shirtText) { %>
-			<text fill="white" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle"><%= queries.shirtText %></text>
+			<text fill="<%= queries.textColor %>" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle"><%= queries.shirtText %></text>
 		<% } %>
 	</svg>
 </aside>
