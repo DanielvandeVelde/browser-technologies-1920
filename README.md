@@ -3,18 +3,15 @@
 ## Beoordeling 20 maart
 
 Ik heb hard gewerkt om een goede puur HTML website neer te zetten waar ik best trots op ben.
-Er is weinig waar ik feedback op kan krijgen op dit moment aangezien wat ik nu heb gemaakt vrij netjes voelt.
+Er is weinig waar ik feedback op kan krijgen op dit moment aangezien wat ik nu heb gemaakt vrij netjes voelt.  
 Wanneer ik CSS in ga duiken durf ik te wedden dat ik een stuk meer onderzoek moet gaan doen, bronnen kan aankaarten en wat meer 'nadenken' kan neerzetten.
-
-## Inleiding
-
-Dit is de plek waar ik de uitwerkingen van de verscheidene opdrachten van Browser Technologies plaats.  
-Alle testen die ik uitvoer vinden plaats op een Windows computer met Google Chrome.
 
 ## 1. Opdracht 1.1
 
 <details>
 <summary>Uitwerking opdracht 1.1</summary>
+
+Alle testen die ik uitvoer vinden plaats op een Windows computer met Google Chrome.
 
 ### Afbeeldingen
 
@@ -158,6 +155,7 @@ Het `<video>` element kan zelfs door middel van Javascript gespeeld, gepauzeerd,
 Voor deze applicatie heb ik mijn WAFS opdracht bekeken.  
 Waar ik wijzigingen kon maken heb ik dat natuurlijk gedaan, wanneer dit niet mogelijk was staat dit nog in de Todo beschreven die aan het eind van deze 8 features te vinden is.
 De nieuwe variant met de wijzigingen zal ik binnenkort doorvoeren in m'n progressive web app.
+Alle testen die ik uitvoer vinden plaats op een Windows computer met Google Chrome.
 
 ### Afbeeldingen
 
@@ -275,11 +273,11 @@ Op deze manier worden de ingevulde waardes gebruikt om een (afbeelding van een) 
 HTML is nu aardig semantisch en bovendien werkt de pure HTML versie uitstekend, waar ik best trots op ben.
 Hier en daar gebruik ik wat `<br>`-etjes om de html leesbaar te maken in plaats van een lange horizontale rij aan radiobuttons en input vakken.
 
-- Hals & patroon-type
+#### Hals & patroon-type
 
 Dit zijn radio-buttons en worden dus gelukkig volledig ondersteund.
 
-- Shirt/text/patroon kleur
+#### Shirt/text/patroon kleur
 
 `<input type="color"` [wordt niet door alles ondersteund](https://caniuse.com/#feat=mdn-html_elements_input_input-color).
 Als dit het gebal is dan wordt dit een `input type="text"`.
@@ -287,7 +285,7 @@ Color levert een kleur aan als hexidecimaal maar de `<svg>` accepteert ook html-
 Wanneer iemand dus het text inputveld ziet en daar 'blue' of 'goldenrod' intypt werkt het dus nog allemaal prima.
 Als het echt niet word begrepen is de fallback zwart.
 
-- Text
+#### Text
 
 Momenteel is de `input type="text"` prima.
 Wanneer er een te lange tekst wordt ingevuld dan loopt dit over het t-shirt heen.
@@ -301,6 +299,11 @@ Print-stylesheet is ook een must
 
 ### HTML / CSS / Javascript
 
+<details>
+<summary>Wireflow CSS+Javascript</summary>
+
 <kbd>![CSS+Javascript](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/UC%203.png "CSS+Javascript")</kbd>
+
+</details>
 
 </details>
