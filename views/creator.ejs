@@ -9,23 +9,22 @@
 <body>
 <main id="creator">
 <h1>The t-shirt creator!</h1>
-
 <p>You have created this shirt:</p>
 <ul>
 <% if(queries.shirtColor) { %>
-<li>Has the hex color of: <%= queries.shirtColor %></li>
+	<li>Has the hex color of: <%= queries.shirtColor %></li>
 <% } %>
 <% if(queries.shirtNeck == "v") { %>
-<li>Has a v-neck.</li>
+	<li>Has a v-neck.</li>
 <% } else { %>
-<li>Has a round-neck.</li>
+	<li>Has a round-neck.</li>
 <% } %>
 <% if(queries.shirtText) { %>
-<li>Has the text: "<%= queries.shirtText %>" on it.</li>
+	<li>Has the text: "<%= queries.shirtText %>" on it.</li>
 <% } %>
 <% if(queries.shirtPattern) { %>
-<li>Has a <%= queries.shirtPattern %> pattern on it.</li>
-<li>The pattern has the hex color: <%= queries.patternColor %>"</li>
+	<li>Has a <%= queries.shirtPattern %> pattern on it.</li>
+	<li>The pattern has the hex color: <%= queries.patternColor %>"</li>
 <% } %>
 
 </ul>
@@ -33,46 +32,45 @@
 <aside>
 	<svg width="400" height="275" xmlns="http://www.w3.org/2000/svg">
 		<defs>
-		<mask id="cutNeck">
-			<rect width="400" height="275" fill="white"/>
-			<% if(queries.shirtNeck == "v") { %>
-			<rect  transform = "translate(40,-165) rotate(45 60 60)" width="75" height="75" y="25" x="175" fill="black"/>
-			<% } else {%>
-			<circle cy="0" cx="50%" r="50" fill="black"/>
-			<% } %>
-		</mask>
+			<mask id="cutNeck">
+				<rect width="400" height="275" fill="white"/>
+				<% if(queries.shirtNeck == "v") { %>
+					<rect  transform = "translate(40,-165) rotate(45 60 60)" width="75" height="75" y="25" x="175" fill="black"/>
+				<% } else {%>
+					<circle cy="0" cx="50%" r="50" fill="black"/>
+				<% } %>
+			</mask>
 		</defs>
 	  <rect height="250" width="200" y="16.453125" x="97.5" fill="<%= queries.shirtColor %>" mask="url(#cutNeck)"/>
 		<rect transform="rotate(59.536865234375 79.49259948730466,86.21015930175783) " height="100" width="90" y="32.710163" x="29.492602" fill="<%= queries.shirtColor %>"/>
 	  <rect transform="rotate(-60 315.49261474609375,79.7101593017578) "  height="100" width="90" y="29.710163" x="270.492602" fill="<%= queries.shirtColor %>"/>
-<% if(queries.shirtPattern == "horizontal stripes") { %>
-		<rect height="25" width="200" y="16.45" x="97.5" fill="<%= queries.patternColor %>" mask="url(#cutNeck)" />
-		<rect height="25" width="200" y="65" x="97.5" fill="<%= queries.patternColor %>" />
-		<rect height="25" width="200" y="115" x="97.5" fill="<%= queries.patternColor %>" />
-		<rect height="25" width="200" y="165" x="97.5" fill="<%= queries.patternColor %>" />
-		<rect height="25" width="200" y="215" x="97.5" fill="<%= queries.patternColor %>" />
-<% } %>
-<% if(queries.shirtPattern == "vertical stripes") { %>
-		<rect height="250" width="25" y="16.45" x="110" fill="<%= queries.patternColor %>" />
-		<rect height="250" width="25" y="16.45" x="160" fill="<%= queries.patternColor %>" mask="url(#cutNeck)" />
-		<rect height="250" width="25" y="16.45" x="210" fill="<%= queries.patternColor %>" mask="url(#cutNeck)" />
-		<rect height="250" width="25" y="16.45" x="260" fill="<%= queries.patternColor %>" />
-<% } %>
-<% if(queries.shirtPattern == "dots") { %>
-		<circle cy="75" cx="50" r="10" fill="<%= queries.patternColor %>"/>
-		<circle cy="50" cx="100" r="10" fill="<%= queries.patternColor %>"/>
-		<circle cy="35" cx="250" r="10" fill="<%= queries.patternColor %>"/>
-		<circle cy="129" cx="117" r="10" fill="<%= queries.patternColor %>"/>
-		<circle cy="169" cx="269" r="10" fill="<%= queries.patternColor %>"/>
-		<circle cy="100" cx="325" r="10" fill="<%= queries.patternColor %>"/>
-		<circle cy="250" cx="250" r="10" fill="<%= queries.patternColor %>"/>
-		<circle cy="162" cx="175" r="10" fill="<%= queries.patternColor %>"/>
-		<circle cy="235" cx="115" r="10" fill="<%= queries.patternColor %>"/>
-<% } %>
-
-			<% if(queries.shirtText) { %>
-				<text fill="white" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle"><%= queries.shirtText %></text>
-			<% } %>
+		<% if(queries.shirtPattern == "horizontal stripes") { %>
+			<rect height="25" width="200" y="16.45" x="97.5" fill="<%= queries.patternColor %>" mask="url(#cutNeck)" />
+			<rect height="25" width="200" y="65" x="97.5" fill="<%= queries.patternColor %>" />
+			<rect height="25" width="200" y="115" x="97.5" fill="<%= queries.patternColor %>" />
+			<rect height="25" width="200" y="165" x="97.5" fill="<%= queries.patternColor %>" />
+			<rect height="25" width="200" y="215" x="97.5" fill="<%= queries.patternColor %>" />
+		<% } %>
+		<% if(queries.shirtPattern == "vertical stripes") { %>
+			<rect height="250" width="25" y="16.45" x="110" fill="<%= queries.patternColor %>" />
+			<rect height="250" width="25" y="16.45" x="160" fill="<%= queries.patternColor %>" mask="url(#cutNeck)" />
+			<rect height="250" width="25" y="16.45" x="210" fill="<%= queries.patternColor %>" mask="url(#cutNeck)" />
+			<rect height="250" width="25" y="16.45" x="260" fill="<%= queries.patternColor %>" />
+		<% } %>
+		<% if(queries.shirtPattern == "dots") { %>
+			<circle cy="75" cx="50" r="10" fill="<%= queries.patternColor %>"/>
+			<circle cy="50" cx="100" r="10" fill="<%= queries.patternColor %>"/>
+			<circle cy="35" cx="250" r="10" fill="<%= queries.patternColor %>"/>
+			<circle cy="129" cx="117" r="10" fill="<%= queries.patternColor %>"/>
+			<circle cy="169" cx="269" r="10" fill="<%= queries.patternColor %>"/>
+			<circle cy="100" cx="325" r="10" fill="<%= queries.patternColor %>"/>
+			<circle cy="250" cx="250" r="10" fill="<%= queries.patternColor %>"/>
+			<circle cy="162" cx="175" r="10" fill="<%= queries.patternColor %>"/>
+			<circle cy="235" cx="115" r="10" fill="<%= queries.patternColor %>"/>
+		<% } %>
+		<% if(queries.shirtText) { %>
+			<text fill="white" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle"><%= queries.shirtText %></text>
+		<% } %>
 	</svg>
 </aside>
 </body>
