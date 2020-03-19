@@ -1,5 +1,11 @@
 # Browser Technologies
 
+## Beoordeling 20 maart
+
+Ik heb hard gewerkt om een goede puur HTML website neer te zetten waar ik best trots op ben.
+Er is weinig waar ik feedback op kan krijgen op dit moment aangezien wat ik nu heb gemaakt vrij netjes voelt.
+Wanneer ik CSS in ga duiken durf ik te wedden dat ik een stuk meer onderzoek moet gaan doen, bronnen kan aankaarten en wat meer 'nadenken' kan neerzetten.
+
 ## Inleiding
 
 Dit is de plek waar ik de uitwerkingen van de verscheidene opdrachten van Browser Technologies plaats.  
@@ -246,18 +252,52 @@ Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet cor
 
 De gebruiker kan verschillende dingen selecteren waaronder:
 
-- Hals (rond of v)
 - Shirt kleur
+- Hals
+- Text
+- Text kleur
 - Patroon
-- Patroonkleur
+- Patroon kleur
 
-Mogelijk:
+Vervolgens kan de gebruiker dit 'opslaan' waardoor dit allemaal in de URL komt te staan en de URL bewaard kan worden door deze bijvoorbeeld ergens op te slaan of toe te voegen aan de bladwijzer.
+De gebruiker kan dit ook verzenden.
+Op deze manier worden de ingevulde waardes gebruikt om een (afbeelding van een) t-shirt te genereren.
 
 ### HTML
 
+<details>
+<summary>Wireflow</summary>
+
 <kbd>![Puur HTML](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/UC%201.png "Puur HTML")</kbd>
 
+</details>
+
+HTML is nu aardig semantisch en bovendien werkt de pure HTML versie uitstekend, waar ik best trots op ben.
+Hier en daar gebruik ik wat `<br>`-etjes om de html leesbaar te maken in plaats van een lange horizontale rij aan radiobuttons en input vakken.
+
+- Hals & patroon-type
+
+Dit zijn radio-buttons en worden dus gelukkig volledig ondersteund.
+
+- Shirt/text/patroon kleur
+
+`<input type="color"` [wordt niet door alles ondersteund](https://caniuse.com/#feat=mdn-html_elements_input_input-color).
+Als dit het gebal is dan wordt dit een `input type="text"`.
+Color levert een kleur aan als hexidecimaal maar de `<svg>` accepteert ook html-kleuren.
+Wanneer iemand dus het text inputveld ziet en daar 'blue' of 'goldenrod' intypt werkt het dus nog allemaal prima.
+Als het echt niet word begrepen is de fallback zwart.
+
+- Text
+
+Momenteel is de `input type="text"` prima.
+Wanneer er een te lange tekst wordt ingevuld dan loopt dit over het t-shirt heen.
+Dit is iets wat ik mogelijk op de server nog kan veranderen voor pure HTML en wat ik anders met CSS&Javascript mogelijk kan oplossen door een maximum breedte mee te geven.
+
 ### CSS
+
+Mooi gestyled, mogelijk aparte CSS voor script en `<noscript>`
+Misschien met behulp van de checkboxes e.d. het shirt al laten zien voordat er op de knop geklikt wordt om 'm te versturen.
+Print-stylesheet is ook een must
 
 ### HTML / CSS / Javascript
 
