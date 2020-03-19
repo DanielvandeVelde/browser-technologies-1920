@@ -1,0 +1,22 @@
+{
+  "name": "t-shirt-creator",
+  "version": "1.0.0",
+  "description": "Progressive enhancement creating t-shirts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielvandeVelde/browser-technologies-1920.git"
+  },
+  "author": "Daniel van de Velde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielvandeVelde/browser-technologies-1920/issues"
+  },
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}

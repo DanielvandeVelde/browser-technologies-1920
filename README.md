@@ -5,11 +5,6 @@
 Dit is de plek waar ik de uitwerkingen van de verscheidene opdrachten van Browser Technologies plaats.  
 Alle testen die ik uitvoer vinden plaats op een Windows computer met Google Chrome.
 
-## Inhoudsopgave
-
-1. [Opdracht 1.1](#1-opdracht-11)
-2. [Opdracht 1.2](#2-opdracht-12)
-
 ## 1. Opdracht 1.1
 
 <details>
@@ -248,6 +243,15 @@ Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet cor
 ### Use case
 
 2. Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, printen, opslaan en een volgende keer dat ik de site bezoek kunnen gebruiken.
+
+De gebruiker kan verschillende dingen selecteren waaronder:
+
+- Hals (rond of v)
+- Shirt kleur
+- Patroon
+- Patroonkleur
+
+Mogelijk:
 
 ### HTML
 
