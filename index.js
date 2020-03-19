@@ -7,23 +7,11 @@ app.set("views", "views");
 app.use(express.static("public"));
 
 app.get("/creator", (req, res) => {
-  let queries = {};
-
-  if (Object.entries(req.query).length > 0) {
-    queries = req.query;
-  }
-
-  res.render("creator", { queries });
+  res.render("creator", { queries: req.query });
 });
 
 app.get("*", (req, res) => {
-  let queries = {};
-
-  if (Object.entries(req.query).length > 0) {
-    queries = req.query;
-  }
-
-  res.render("index", { queries });
+  res.render("index", { queries: req.query });
 });
 
 app.listen(port, () =>
