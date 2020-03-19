@@ -9,8 +9,9 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   let queries = {
-    fname: "",
-    lname: ""
+    shirtColor: "",
+    shirtNeck: "",
+    shirtText: ""
   };
 
   if (Object.entries(req.query).length > 0) {
@@ -21,7 +22,17 @@ app.get("/", (req, res) => {
 });
 
 app.get("/creator", (req, res) => {
-  app.send("creator");
+  let queries = {
+    shirtColor: "",
+    shirtNeck: "",
+    shirtText: ""
+  };
+
+  if (Object.entries(req.query).length > 0) {
+    queries = req.query;
+  }
+
+  res.render("creator", { queries });
 });
 
 app.listen(port, () =>
