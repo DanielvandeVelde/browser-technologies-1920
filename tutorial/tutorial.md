@@ -2,10 +2,11 @@
 
 ## Inleiding
 
-Deze uitleg gaat er vanuit dat je al een keer eerder npm en node heb gebruikt. Al is er zeker een klein duwtje om deze goed op te starten.
+Deze uitleg gaat er vanuit dat je al een keer eerder npm en node heb gebruikt.  
+Al is er zeker een klein duwtje om deze goed op te starten.
 We gaan door de stappen :
 
-1. Opzetten van een express server
+1. Controleren van je express server
 2. Het maken van een formulier in EJS
 3. Het gebruiken van req.query
 
@@ -52,7 +53,7 @@ const app = express(); //Dit gebruik je als variabele app
 
 app.get("/", function(req, res) {
   res.send("hello world");
-}); //Wanneer je naar je website sturen we: hello world
+}); //Wanneer je naar je website gaat sturen we: hello world
 
 app.listen(3000, function() {
   console.log(`Form app listening on port 3000!`);
