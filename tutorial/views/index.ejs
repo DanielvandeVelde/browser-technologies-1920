@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <form>
+    <label>
+      Voornaam:
+      <input type="text" name="voornaam" value="<%= query.voornaam %>" />
+    </label>
+    <label>
+      Achternaam:
+      <input type="text" name="achternaam" value="<%= query.achternaam %>"/>
+    </label>
+    <input type="submit" value="verzend" />
+  </form>
+  <% if(query.voornaam) { %>
+  <p> Jouw voornaam is: <%= query.voornaam %> </p>
+  <% } if(query.achternaam) { %>
+  <p> Jouw achternaam is: <%= query.achternaam %> </p>
+  <% } %>
+  </body>
+</html>
