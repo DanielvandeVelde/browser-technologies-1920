@@ -154,7 +154,7 @@ Het `<video>` element kan zelfs door middel van Javascript gespeeld, gepauzeerd,
 
 ### Inleiding
 
-Voor deze applicatie heb ik mijn WAFS opdracht bekeken.  
+Voor deze applicatie heb ik mijn [WAFS opdracht](https://github.com/danielvandevelde/web-app-from-scratch-1920) bekeken.  
 Waar ik wijzigingen kon maken heb ik dat natuurlijk gedaan, wanneer dit niet mogelijk was staat dit nog in de Todo beschreven die aan het eind van deze 8 features te vinden is.
 De nieuwe variant met de wijzigingen zal ik binnenkort doorvoeren in m'n progressive web app.
 Alle testen die ik uitvoer vinden plaats op een Windows computer met Google Chrome.
@@ -210,14 +210,52 @@ Persoonlijk zou ik deze het liefst aanpassen of volledig weghalen.
 
 ### Device Lab
 
-Op mobiel is mijn website momenteel **veels** te klein.
-Ik ben onder de indruk hoe moeilijk het is om op de verschillende knoppen te drukken van niet alleen de navigatiebalk boven aan de pagina, maar ook de verschillende items in de lijst zelf.
-Dit is iets waar ik even goed naar moet kijken en desnoods moet oplossen met mediaqueries.
+Ik heb dit allemaal getest op [Browserstack](https://www.browserstack.com).  
+Aangezien ik niet al deze interessante devices heb.  
+Ook laat ik natuurlijk mijn falen zien ipv de devices en browsers waar het allemaal op werkt.
+Ik kon daardoor niet makkelijk een inspector/console openen om te zien waar het precies fout ging, maar heb m'n best gedaan om te kijken wat er fout ging en de waarom te onderzoeken
+
+<kbd>![IE11](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/DL%20IE11.png "IE11")</kbd>
+
+Op IE11 kom je een error tegen van back- & forward caching. Dit gebeurde alleen op de niet Windows 10 versie van IE11 (want blijkbaar zijn die verschillend).  
+Dit heeft te maken met bepaalde browserinstellingen (compatability) en de gebruikte Javascript in de pagina.
+
+Het is mij niet gelukt precies vast te stellen waar het aan ligt maar waarschijnlijk is het de localStorage die dingen probeert de cachen, Google en StackOverflow geven hier namelijk hele interessante antwoorden op zoals bepaalde `window.onload`, `caching images` en andere dingen die er voor zorgen dat ik het niet direct kan oplossen zonder er een (paar) uur over te zweten.
+Al zou sowieso alles vastlopen door de arrow-functions die ik gebruik 😊
+
+<kbd>![iPad Safari](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/DL%20iPad%20Safari.png "iPad Safari")</kbd>
+
+Op Safari loop ik ook tegen iets aan. Hier laadt namelijk alles goed, maar voert hij verder niets uit.  
+Ik denk dat dit komt omdat ik een pre-2016 iPad gebruik (1-4, air, mini 1-4 en/of pro) die een iOS versie gebruikt van Chrome en Safari die geen arrow-functions ondersteund.
+
+<kbd>![iPhone Safari](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/DL%20iPhone%20Safari.png "iPhone Safari")</kbd>
+
+Op elk klein scherm maar hier getest op een iPhone met Safari, is mijn website momenteel **veels** te klein.  
+Ik ben onder de indruk hoe moeilijk het is om op de verschillende knoppen te drukken van niet alleen de navigatiebalk boven aan de pagina, maar ook de verschillende items in de lijst zelf.  
+Dit is iets wat opgelost kan worden door in eerste instantie te werken met viewport relative heights, maar wat ik ook met mediaqueries zou kunnen oplossen.
+
+<kbd>![WindowsPhone](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/DL%20WindowsPhone.png "WindowsPhone")</kbd>
+
+Op de allereerste Windows Phone waar ik op kon testen, de Nokia Lumia 520, is er ook van alles aan de hand.  
+Hier zien we niet alleen dat de arrow-functions niet laden, de SVG wel beschikbaar is. Maar de CSS achtergrond-afbeelding + gradient die ik heb aangegeven niet werken.
+Dit is dus ook een gevalletje van speciale CSS instellen (fallbacks werken niet want hij herkend de CSS dus wel) voor dit soort devices en natuurlijk; arrow-functions.
 
 ### Screenreader
 
 Het testen met de screenreader ging niet super goed.
 De verschillende lagen in de lijst met informatie er in die ik met een `<span>` gestijld staat maar gelukkig nog wel in de juiste volgorde word voorgelezen.
+Daar zeg ik gelukkig bij, want het gaat in een snelheid waar ik misselijk van werd. Hoe snel de 'narrator' alles afraffelde van uur naar dag naar week door eerst het euro-teken uit te spreken, de volledige nummers en vervolgens de comma en alles wat daar achter kwam overweldigde mij wel.  
+Hopelijk is dit iets wat je zelf kan instellen of iets waar je goed ik kan worden terwijl je het gebruikt, want ik weet helaas niet hoe je dit 'beter' kan maken.
+
+Ik was ook niet in staat mijn <h1> te selecteren, wat iets was wat ik wel had verwacht wat voorgelezen werd terwijl je de pagina benaderde. Dat is iets wat ik op de detailpagina dus bijvoorbeeld wel in de titel moet zetten om duidelijk te maken op welke pagina je je bevind.
+
+De detailpagina's zelf waren leeg.  
+Omdat ik een canvas element gebruik om data te laten zien kon de screenreader dit niet voorlezen.  
+Ik vraag me ook sowieso af hoe een screenreader een grafiek zou kunnen voorlezen en in mijn zoektocht op het internet heb ik helaas geen grafieken gevonden die voorleesbaar waren met een screenreader.  
+De fallback echter zou een tabel zijn, die zijn zeker beschikbaar voor een screenreader en iets wat ook handig is voor mensen die geen Javascript aan hebben staan. [Wat het meerendeel van de screenreader gebruikers overigens wel heeft](https://a11yproject.com/posts/people-who-use-screen-readers-dont-use-javascript/)  
+Ik kom er dus niet zo makelijk van af 😊
+
+In de navigatiebalk heb ik op de detailpagina een pijl staan. Dit wordt natuurlijk niet voorgelezen door de screenreader. Maar wat mij verbaasde is dat de placeholder tekst van mijn input ook niet werd voorgelezen door de screenreader. Dit is dus de reden waarom wij labels hebben en waarom ik deze absoluut had moeten toevoegen.
 
 ### Overige accessibility
 
@@ -237,6 +275,7 @@ Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet cor
 - [ ] Mobile-friendly
 - [ ] :focus-state duidelijker maken (mogelijk hetzelfde als :hover)
 - [ ] prebuilden van minify/uglify en compression van bestanden
+- [ ] Geen arrow functions
 - [ ] fallback voor geen javascript
 
 </details>

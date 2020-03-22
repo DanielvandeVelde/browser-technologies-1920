@@ -8,7 +8,7 @@ We gaan door de stappen :
 
 1. Controleren van je express server
 2. Het maken van een formulier in EJS
-3. Het gebruiken van req.query
+3. Het ophalen en gebruiken queries in de URL
 
 Onder elk stuk staat er een "➤ handige links" met daarin verschillende links naar uitleg, termen die besproken zijn of andere dingen die mogelijk verwarrend waren.
 
