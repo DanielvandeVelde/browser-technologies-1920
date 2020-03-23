@@ -356,4 +356,13 @@ Print-stylesheet is ook een must
 
 </details>
 
-</details>
+### To-do / Wishlist opdracht 2
+
+- [x] Pure HTML core-features
+- [ ] CSS enhancement
+- [ ] JS enhancement
+- [x] Onderzoek feature detection
+- [ ] Implementatie van feature detection onderzoek
+- [ ] Browser testing
+- [ ] Verbetering a.d.h.v. browser testing
+  </details>
