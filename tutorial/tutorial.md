@@ -2,9 +2,8 @@
 
 ## Inleiding
 
-Deze uitleg gaat er vanuit dat je al een keer eerder npm en node heb gebruikt.  
-Al is er zeker een klein duwtje om deze goed op te starten.
-We gaan we het hebben over templating engines, syntax, urlencoded data, `request.query` en meer.
+Deze uitleg gaat er vanuit dat je al een keer eerder npm en node heb gebruikt maar is verder heel beginner vriendelijk.  
+Aan het einde weet je hopelijk meer over: template engines, syntax, urlencoded data, `request.query` en meer!  
 We gaan door de stappen :
 
 1. Controleren van je express server
