@@ -4,6 +4,7 @@
 
 Deze uitleg gaat er vanuit dat je al een keer eerder npm en node heb gebruikt.  
 Al is er zeker een klein duwtje om deze goed op te starten.
+We gaan we het hebben over templating engines, syntax, urlencoded data, `request.query` en meer.
 We gaan door de stappen :
 
 1. Controleren van je express server
@@ -154,6 +155,7 @@ Dus nu hebben wij ons formulier, 🎉 hoera! 🎈
 <summary>Handige links</summary>
 
 - [EJS website](ejs.co)
+- [Template engines and Express](https://expressjs.com/en/guide/using-template-engines.html)
 
 </details>
 
