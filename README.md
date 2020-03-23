@@ -247,7 +247,7 @@ De verschillende lagen in de lijst met informatie er in die ik met een `<span>` 
 Daar zeg ik gelukkig bij, want het gaat in een snelheid waar ik misselijk van werd. Hoe snel de 'narrator' alles afraffelde van uur naar dag naar week door eerst het euro-teken uit te spreken, de volledige nummers en vervolgens de comma en alles wat daar achter kwam overweldigde mij wel.  
 Hopelijk is dit iets wat je zelf kan instellen of iets waar je goed ik kan worden terwijl je het gebruikt, want ik weet helaas niet hoe je dit 'beter' kan maken.
 
-Ik was ook niet in staat mijn <h1> te selecteren, wat iets was wat ik wel had verwacht wat voorgelezen werd terwijl je de pagina benaderde. Dat is iets wat ik op de detailpagina dus bijvoorbeeld wel in de titel moet zetten om duidelijk te maken op welke pagina je je bevind.
+Ik was ook niet in staat mijn `<h1>` te selecteren, wat iets was wat ik wel had verwacht wat voorgelezen werd terwijl je de pagina benaderde. Dat is iets wat ik op de detailpagina dus bijvoorbeeld wel in de titel moet zetten om duidelijk te maken op welke pagina je je bevind.
 
 De detailpagina's zelf waren leeg.  
 Omdat ik een canvas element gebruik om data te laten zien kon de screenreader dit niet voorlezen.  
