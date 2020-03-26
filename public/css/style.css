@@ -18,13 +18,18 @@ html {
 }
 
 body {
-  background: #ffffff11;
+  background: linear-gradient(to right, #ffffff00, #ffffff42, #ffffff00);
   padding: 2.5em 0;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   z-index: 99;
+}
+
+header {
+  position: absolute;
+  transform: translateY(-10em);
 }
 
 h1 {
@@ -53,8 +58,13 @@ div {
 
 label {
   font-weight: normal;
-  padding: 1em 0;
+  padding: 0.25em 0;
   padding-right: 0;
+  display: block;
+}
+
+label > label {
+  display: inline;
 }
 
 input[type="text"] {
@@ -65,7 +75,7 @@ input[type="text"] {
 }
 
 input[type="color"] {
-  margin: 1em 0;
+  margin: 1em;
 }
 
 div:last-child {
@@ -126,4 +136,38 @@ html:before {
   to {
     content: "\1F618";
   }
+}
+
+#creator main {
+  background: #eee;
+  border-radius: 2em 2em 0 0;
+  padding: 2em 2em 1em 2em;
+  width: 28em;
+  box-shadow: 0.5em 0.5em 0.25em 0em rgba(0, 0, 0, 0.25);
+}
+
+#creator aside {
+  border-radius: 0 0 2em 2em;
+  padding: 0 0 2em 2em;
+  background: #eee;
+  width: 30em;
+  box-shadow: 0.5em 0.5em 0.25em 0em rgba(0, 0, 0, 0.25);
+}
+
+#creator p {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+#creator ul {
+  margin: 0 auto;
+}
+
+#creator li {
+  padding: 0.5em 0;
+}
+
+#creator aside svg {
+  padding-left: 2em;
 }

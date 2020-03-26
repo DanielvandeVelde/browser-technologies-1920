@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>T-shirt creator</title>
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body id="creator">
+  <header><h1>The t-shirt creator!</h1></header>
 <main>
-<h1>The t-shirt creator!</h1>
 <p>You have created this shirt:</p>
 <ul>
 <% if(queries.shirtColor) { %>
-	<li>The shirt has the color: <%= queries.shirtColor %></li>
+	<li>The shirt has the color: <span style="font-weight:bold;color:<%= queries.shirtColor %>"><%= queries.shirtColor %></span></li>
 <% } %>
 <% if(queries.shirtNeck == "v") { %>
 	<li>Has a v-neck.</li>
@@ -21,13 +22,12 @@
 <% } %>
 <% if(queries.shirtText) { %>
 	<li>Has the text: "<%= queries.shirtText %>" on it.</li>
-	<li>The text has the color: <%= queries.textColor %></li>
+	<li>The text has the color: <span style="font-weight:bold;color:<%= queries.textColor %>"><%= queries.textColor %></li>
 <% } %>
 <% if(queries.shirtPattern) { %>
 	<li>Has a <%= queries.shirtPattern %> pattern on it.</li>
-	<li>The pattern has the color: <%= queries.patternColor %></li>
+	<li>The pattern has the color: <span style="font-weight:bold;color:<%= queries.patternColor %>"><%= queries.patternColor %></li>
 <% } %>
-
 </ul>
 </main>
 <aside>
@@ -70,7 +70,7 @@
 			<circle cy="235" cx="115" r="10" fill="<%= queries.patternColor %>"/>
 		<% } %>
 		<% if(queries.shirtText) { %>
-			<text fill="<%= queries.textColor %>" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle"><%= queries.shirtText %></text>
+			<text font-weight="bold" fill="<%= queries.textColor %>" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle"><%= queries.shirtText %></text>
 		<% } %>
 	</svg>
 </aside>
