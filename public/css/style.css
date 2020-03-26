@@ -101,22 +101,22 @@ button:hover {
   transform: translate(0, 0);
 }
 
-button::before {
+button:last-child::before {
   content: "😔";
   display: inline-block;
   font-size: 2em;
   padding-right: 0.5em;
 }
 
-html:hover button::before {
+html:hover button:last-child::before {
   content: "\1F60C";
 }
 
-form:hover button::before {
+form:hover button:last-child::before {
   content: "\1F60A";
 }
 
-form:hover button:hover::before {
+form:hover button:last-child:hover::before {
   animation: kiss 1s infinite;
   content: "\1F61A";
 }
