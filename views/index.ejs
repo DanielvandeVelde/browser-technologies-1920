@@ -11,38 +11,44 @@
   <form>
     <fieldset>
     <legend>T-shirt</legend>
-  <label>Shirt color<br>
+  <div><label>Shirt color
   <label><input type="color" name="shirtColor" value="<%= queries.shirtColor %>"/></label>
-</label><br><br><label>Neck type<br>
+  </label></div>
+  <div><label>Neck type
   <label><input type="radio" name="shirtNeck" value="v" <% if (queries.shirtNeck == "v") { %> checked <% } %> >V-neck</label>
   <label><input type="radio" name="shirtNeck" value="round" <% if (queries.shirtNeck == "round") { %> checked <% } %> >Round neck</label>
   </label>
+</div>
   </fieldset>
   <fieldset>
   <legend>Customization</legend>
-  <label>Text on shirt:<br>
+  <div><label>Text on shirt:
   <input type="text" name="shirtText" value="<%= queries.shirtText %>" placeholder="Text on shirt">
   </label>
-  <br>
-  <br>
+</div>
+<div>
   <label>
   Text color
-  <br>
+
     <input type="color" name="textColor" value="<%= queries.textColor %>"/></label>
-  <br><br>
+</div>
+<div>
   <label>Pattern
-  <br>
+
   <label><input type="radio" name="shirtPattern" value="dots"  <% if (queries.shirtPattern == "dots") { %> checked <% } %> >Dots</label>
   <label><input type="radio" name="shirtPattern" value="vertical stripes" <% if (queries.shirtPattern == "vertical stripes") { %> checked <% } %> >Vertical stripes</label>
   <label><input type="radio" name="shirtPattern" value="horizontal stripes" <% if (queries.shirtPattern == "horizontal stripes") { %> checked <% } %> >Horizontal stripes</label>
-  <br><br>
+</label>
+</div>
+<div>
   <label>
     Pattern color
-  <br>
+
   <input type="color" name="patternColor" value="<%= queries.patternColor %>"/>
   </label>
+</div>
   </fieldset>
-  <br>
+
   <input type="submit" value="Save" formaction="/">  <input type="submit" value="Submit" formaction="/creator">
 </form>
 </main></body>
