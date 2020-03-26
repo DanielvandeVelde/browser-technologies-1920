@@ -1,19 +1,129 @@
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #3a6073; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #16222a,
+    #3a6073
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #16222a,
+    #3a6073
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 body {
-  background-color: brown;
+  background: #ffffff11;
+  padding: 2.5em 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 99;
+}
+
+h1 {
+  color: white;
+  padding-bottom: 5vh;
+  font-size: 4.2em;
 }
 
 form {
-  width: 640px;
+  background: #eee;
+  padding: 2.5em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.5em 0.5em 0.25em 0em rgba(0, 0, 0, 0.25);
+}
+
+fieldset {
+  padding: 1em 0;
+  font-weight: bold;
+}
+
+div {
+  padding: 0.125em 0;
 }
 
 label {
-  padding: 1em;
+  font-weight: normal;
+  padding: 1em 0;
   padding-right: 0;
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 95%;
   padding: 1em;
   border: 1px solid #ccc;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
+}
+
+input[type="color"] {
+  margin: 1em 0;
+}
+
+div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border-radius: 1em;
+  background-color: #f1c40f;
+  width: 42%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.5em 0.5em 0.25em 0em rgba(0, 0, 0, 0.5);
+  transform: translate(-0.5em, -0.5em);
+  transition: 0.25s;
+  border: 1px solid #ddb80e;
+}
+
+button:hover {
+  box-shadow: none;
+  transform: translate(0, 0);
+}
+
+button::before {
+  content: "😔";
+  display: inline-block;
+  font-size: 2em;
+  padding-right: 0.5em;
+}
+
+html:hover button::before {
+  content: "\1F60C";
+}
+
+form:hover button::before {
+  content: "\1F60A";
+}
+
+form:hover button:hover::before {
+  animation: kiss 1s infinite;
+  content: "\1F61A";
+}
+
+html:before {
+  content: "\1F455";
+  position: absolute;
+  font-size: 42em;
+  opacity: 0.5;
+  right: -10vw;
+  bottom: -20vh;
+  z-index: 0;
+  transform: rotateZ(20deg);
+}
+
+@keyframes kiss {
+  to {
+    content: "\1F618";
+  }
 }
