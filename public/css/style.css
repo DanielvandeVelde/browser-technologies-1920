@@ -26,6 +26,11 @@ body {
   align-items: center;
   flex-direction: column;
   z-index: 99;
+  overflow: hidden;
+}
+
+main {
+  overflow: hidden;
 }
 
 header {
@@ -128,6 +133,7 @@ form:hover button:last-child:hover::before {
 }
 
 html:before {
+  color: white;
   content: "\1F455";
   position: absolute;
   font-size: 42em;

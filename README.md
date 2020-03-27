@@ -2,11 +2,7 @@
 
 **Ik heb een [demo](https://browsertech-1920.herokuapp.com)!**
 
-## Beoordeling 20 maart
-
-Ik heb hard gewerkt om een goede puur HTML website neer te zetten waar ik best trots op ben.
-Er is weinig waar ik feedback op kan krijgen op dit moment aangezien wat ik nu heb gemaakt vrij netjes voelt.  
-Wanneer ik CSS in ga duiken durf ik te wedden dat ik een stuk meer onderzoek moet gaan doen, bronnen kan aankaarten en wat meer 'nadenken' kan neerzetten.
+En voor dit college ook een [artikel/uitleg/tutorial](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/tutorial/tutorial.md) geschreven over hoe men data uit een formulier op kan halen, op kan slaan, en gebruiken met behulp van Node, Express en EJS.
 
 ## 1. Opdracht 1.1
 
@@ -359,7 +355,7 @@ Print-stylesheet is ook een must
 ### To-do / Wishlist opdracht 2
 
 - [x] Pure HTML core-features
-- [ ] CSS enhancement
+- [x] CSS enhancement
 - [ ] JS enhancement
 - [x] Onderzoek feature detection
 - [ ] Implementatie van feature detection onderzoek
