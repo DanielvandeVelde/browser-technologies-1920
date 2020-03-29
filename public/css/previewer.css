@@ -1,0 +1,32 @@
+main {
+  display: flex;
+}
+
+form {
+  border-radius: 1em 0 0 1em;
+}
+
+aside {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 2.5em;
+  border-radius: 0 1em 1em 0;
+  justify-content: center;
+  border-left: 1px solid black;
+  flex-direction: column;
+}
+
+footer ul {
+  display: flex;
+}
+
+@media only screen and (max-width: 720px) {
+  aside {
+    display: none;
+  }
+
+  form {
+    border-radius: 1em;
+  }
+}

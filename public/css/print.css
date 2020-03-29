@@ -36,7 +36,7 @@ body:before {
 }
 
 body:after {
-  content: "T-shirt created on: https://browsertech-1920.herokuapp.com/";
+  content: "T-shirt created on: " attr(data-url);
   position: absolute;
   bottom: 1cm;
   width: 100%;
