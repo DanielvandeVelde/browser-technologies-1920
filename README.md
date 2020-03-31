@@ -372,6 +372,15 @@ Deze `<svg>`'s zijn ook volledig accesible door het toe te voegen van `<title>`-
 ### Research
 
 Browser-research
+<kbd>![Mac Safari](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20Mac%20Safari.png "Mac Safari")</kbd>
+
+<kbd>![iPad Safari](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20iPad%20Safari.png "iPad Safari")</kbd>
+
+<kbd>![iPhone Safari](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20iPhone%20Safari.png "iPhone Safari")</kbd>
+
+<kbd>![iPhone Safari2](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20iPhone%20Safari2.png "iPhone Safari2")</kbd>
+
+<kbd>![Pixel Firefox](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20Pixel%20FireFox.png "Pixel FireFox")</kbd>
 
 ### To-do / Wishlist opdracht 2
 
