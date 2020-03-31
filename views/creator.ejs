@@ -80,5 +80,19 @@
 		<% } %>
 	</svg>
 </aside>
+<script>
+  createPrintButton()
+  function createPrintButton() {
+
+    const body = document.body,
+      a = document.createElement("a");
+      a.href = "javascript:window.print()"
+      a.id = "printButton"
+      aText = document.createTextNode("Print shirt");
+
+    a.appendChild(aText)
+    body.appendChild(a);
+  }
+</script>
 </body>
 </html>
