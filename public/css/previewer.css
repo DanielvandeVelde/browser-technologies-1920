@@ -1,3 +1,11 @@
+body {
+  justify-content: space-between;
+}
+
+header {
+  margin-bottom: 0;
+}
+
 main {
   display: flex;
 }
@@ -17,11 +25,24 @@ aside {
   flex-direction: column;
 }
 
+footer {
+  background-color: #eee;
+  border-radius: 2em 2em 0 0;
+  padding: 1em;
+}
+
+footer h2 {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
 footer ul {
   display: flex;
 }
 
-footer ul li svg {
+footer ul li {
   padding: 0 0.5em;
 }
 
