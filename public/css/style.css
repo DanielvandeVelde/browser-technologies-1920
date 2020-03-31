@@ -38,11 +38,11 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: visible;
+  overflow-y: scroll;
 }
 
 header {
-  padding: 1em;
+  padding: 1em 0;
   margin-bottom: 2em;
   background: #eee;
   -webkit-box-shadow: 0.5em 0.5em 0.25em 0em rgba(0, 0, 0, 0.25);
