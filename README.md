@@ -463,7 +463,7 @@ Nadat de eerste kinken uit de kabel waren door alles op te lossen in onder ander
 
 Voor de screenreader ben ik geen hele rare dingen tegengekomen.  
 Een aantal dingen die mij opvielen waren dat er eerst de ::before emoji's voorgelezen werden van de button voordat de tekst zelf werd voorgelezen.  
-En dat in de `<svg>`'s niet alleen de tekst van de link wordt voorgelezen maar ook nog eens de titel van de `<svg>`.  
+En dat in de `<svg>`'s niet alleen de tekst van de `<a>`-link wordt voorgelezen maar ook nog eens de titel van de `<svg>`.  
 Overigens wordt in de type=color inputs wel de hexcode voorgelezen als een percentage van rood, geel en blauw maar wanneer deze normaal gesproken een hexcode voorleest doet hij dit wel door "#ffffff" te zeggen, dit zou iets zijn wat ik misschien nog zou kunnen veranderen als ik daar de tijd voor heb.
 Al met al niet heel storend, maar wel iets wat opviel.
 
