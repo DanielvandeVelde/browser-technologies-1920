@@ -62,8 +62,25 @@ footer ul li {
 }
 
 @media only screen and (max-width: 720px) {
+  header {
+    margin-bottom: 1em;
+  }
+
+  html::before {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
   aside {
     display: none;
+  }
+
+  body {
+    justify-content: center;
   }
 
   form {
