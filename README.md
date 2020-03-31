@@ -347,6 +347,10 @@ In de creator zorgt de CSS voor een overzichtelijk geheel door de uitgekozen kle
 Tevens voegt de CSS print-stylesheet een extra laag toe aan het printen van de pagina door hier een aantal web onderdelen weg te halen en enkel het shirt in het midden te houden.  
 Daarnaast is er ook een optie voor de gebruiker om na het printen zijn naam in te vullen en deze dus extra persoonlijk te maken.
 
+Ik heb de CSS-geprefixt zodat deze beter werkt op oudere browsers.  
+Dit was niet volledig nodig aangezien wanneer flex, box-shadow, background & animation niet werken er enkel wat styling wegvalt.  
+Echter voor de enhancement van de pagina is het wel zo prettig.
+
 ### HTML / CSS / Javascript
 
 <details>
@@ -360,9 +364,9 @@ Daarnaast is er ook een optie voor de gebruiker om na het printen zijn naam in t
 
 - [x] Pure HTML core-features
 - [x] CSS enhancement
-- [ ] JS enhancement
+- [x] JS enhancement
 - [x] Onderzoek feature detection
-- [ ] Implementatie van feature detection onderzoek
+- [x] Implementatie van feature detection onderzoek
 - [ ] Browser testing
 - [ ] Verbetering a.d.h.v. browser testing
   </details>
