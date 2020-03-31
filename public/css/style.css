@@ -162,11 +162,11 @@ html:hover button:last-child::before {
   content: "\1F60C";
 }
 
-form:hover button:last-child::before {
+main:hover button:last-child::before {
   content: "\1F60A";
 }
 
-form:hover button:last-child:hover::before {
+main:hover button:last-child:hover::before {
   -webkit-animation: kiss 1s infinite;
   animation: kiss 1s infinite;
   content: "\1F61A";
