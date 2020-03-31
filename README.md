@@ -360,6 +360,15 @@ Echter voor de enhancement van de pagina is het wel zo prettig.
 
 </details>
 
+Met behulp van Javascript voeg ik een aantal dingen toe die het leven wat makkelijker maken.  
+Ik heb een preview toegevoegd zodat het t-shirt alvast zichtbaar is voor de gebruiker. Op deze manier hoeft deze niet de pagina niet meer te verzenden om te zien wat voor een shirt deze heeft gemaakt.
+Tevens heb ik een listener op het formulier gezet die wanneer er iets veranderd gelijk de preview update.
+
+Voor wat gemak en inspiratie heb ik ook een 'created by others' onderdeel gemaakt.  
+Angezien dit niet relevant is voor de main-feature van de pagina voeg ik deze later toe met Javascript.  
+Deze 'created by others' is een samenstelling van 5 verschillende shirts die gemaakt worden met willekeurige kleuren en patroonkeuzes.
+Deze `<svg>`'s zijn ook volledig accesible door het toe te voegen van `<title>`-elementen zowel als tekst binnenin de `<a>`.
+
 ### To-do / Wishlist opdracht 2
 
 - [x] Pure HTML core-features

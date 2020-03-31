@@ -143,15 +143,21 @@ function othersCreated() {
 
 function relatedShirts(queries, id) {
   let tshirt =
-    `<svg width="150px" height="150px">  <a href="/?shirtColor=${encodeURIComponent(
+    `<svg width="150px" height="150px"><title>A ${
+      queries.shirtNeck
+    }-necked shirt in the hex-color: ${
+      queries.shirtColor
+    }.</title><a href="/?shirtColor=${encodeURIComponent(
       queries.shirtColor
     )}&shirtNeck=${encodeURIComponent(
       queries.shirtNeck
     )}&shirtPattern=${encodeURIComponent(
       queries.shirtPattern
-    )}&patternColor=${encodeURIComponent(
-      queries.patternColor
-    )}"><defs><mask id="smallCut` +
+    )}&patternColor=${encodeURIComponent(queries.patternColor)}">A ${
+      queries.shirtNeck
+    }-necked shirt in the hex-color: ${
+      queries.shirtColor
+    }.><defs><mask id="smallCut` +
     id +
     `"><rect width="150" height="150" fill="white"></rect>`;
   if (queries.shirtNeck == "v") {
