@@ -69,7 +69,7 @@ function getData() {
 }
 
 function shirtPainter(queries) {
-  let tshirt = `<defs><mask id="cutNeck"><rect width="400" height="275" fill="white"></rect>`;
+  let tshirt = `<title>A ${queries.shirtNeck}-necked shirt in the hex-color: ${queries.shirtColor}.</title><defs><mask id="cutNeck"><rect width="400" height="275" fill="white"></rect>`;
   if (queries.shirtNeck == "v") {
     tshirt += `<rect transform="translate(40,-165) rotate(45 60 60)" width="75" height="75" y="25" x="175" fill="black"></rect>`;
   } else {
