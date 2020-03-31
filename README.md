@@ -283,9 +283,13 @@ Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet cor
 
 ### Use case
 
+#### Opdracht
+
 2. Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, printen, opslaan en een volgende keer dat ik de site bezoek kunnen gebruiken.
 
-De gebruiker kan verschillende dingen selecteren waaronder:
+#### Oplossing
+
+De gebruiker kan verschillende dingen selecteren of invullen waaronder:
 
 - Shirt kleur
 - Hals
@@ -297,6 +301,7 @@ De gebruiker kan verschillende dingen selecteren waaronder:
 Vervolgens kan de gebruiker dit 'opslaan' waardoor dit allemaal in de URL komt te staan en de URL bewaard kan worden door deze bijvoorbeeld ergens op te slaan of toe te voegen aan de bladwijzer.
 De gebruiker kan dit ook verzenden.
 Op deze manier worden de ingevulde waardes gebruikt om een (afbeelding van een) t-shirt te genereren.
+Om dit te doen aan de kant van de server heb ik hierboven een tutorial gelinkt.
 
 ### HTML
 
@@ -371,16 +376,96 @@ Deze `<svg>`'s zijn ook volledig accesible door het toe te voegen van `<title>`-
 
 ### Research
 
-Browser-research
+#### Inleiding
+
+Dit is de uiteindelijke test of alles wat ik heb gemaakt met oog op accesibility en browsertesting ook werkelijk goed werkte.
+Hiervoor heb ik [Browserstack](https://www.browserstack.com/) gebruikt.
+
+#### Afbeeldingen
+
+Als afbeeldingen gebruik ik `<svg>`s.
+Hoewel deze niet zo veel problemen hebben qua bestandsgrootte en goed bruikbaar zijn inline had ik nog wel een aantal problemen die ik heb kunnen oplossen.
+Zo heb ik in de `<svg>` nog een `<title>`-element kunnen toevoegen zodat er een alt-text zichtbaar is en een tooltip wanneer je hier met je muis over staat.
+
+#### Kleur
+
+Voor kleur heb ik zo veel mogelijk gezorgd dat er een donker op licht contrast is.  
+Ik heb geleerd van mijn eerdere fout met een donkergrijze achtergrond en dit keer heb ik dus gekozen voor een hele licht grijze.  
+De tekst is wel zwart en enkel voor de shirts had ik nog iets kunnen verzinnen om de achtergrond zwart te maken als het shirt wit was.
+
+#### Muis/trackpad
+
+De verschillende inputvelden heb ik geen extra styling meegegeven.  
+Ik heb echter wel een aantal hover op buttons gezet zodat deze beter zichtbaar zijn.  
+Ik heb ook alles een label gegeven zodat deze groter zijn en makkelijker zijn om op te klikken.
+
+#### Breedband
+
+Afbeeldingen zijn kleiner, de pagina laad in principe direct dankzij template literals.  
+Voor minder snel internet of geen connectie tot de CSS of JS niet gevreesd.  
+Deze zijn volledig voor enhancement en de hele website kan gebruikt worden ook al is enkel de pure HTML zichtbaar.
+
+#### Javascript
+
+Javascript wordt alleen gebruikt als enhancement.  
+Een aantal belangrijke dingen worden op de server uitgevoerd en een heleboel dingen worden later als enhancement met client-side JS uitgevoerd om er voor te zorgen dat de pagina makkelijker te gebruiken is.
+
+#### Cookies
+
+Ik maak geen gebruik van cookies en geef alle 'opgeslagen' data door door middel van queries.
+
+#### LocalStorage
+
+Ik maak ook geen gebruik van localStorage. Dus daar hoef ik me ook geen zorgen te maken.
+
+#### Device Lab
+
+Met behulp van [Browserstack](https://Browserstack.com/) heb ik heel erg veel kunnen testen.  
+Op Chrome en Firefox (en zelfs Edge!) in een Windows omgeving wilde alles erg goed gaan.  
+Dit is de reden waarom ik vooral op vervelende dingen heb getest (zoals Safari!).
+
 <kbd>![Mac Safari](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20Mac%20Safari.png "Mac Safari")</kbd>
+
+Een hele vroege mac met een hele vroege versie van Safari.  
+Javascript laadt totaal niet op deze variant.  
+Dit kan komen door `<let> & <const>` want ik heb zeker mijn best gedaan om alle andere ES6 te vermijden.  
+Deze versie van Safari ondersteund ook geen input type=color maar zet deze dus gelukkig terug naar type=text.
 
 <kbd>![iPad Safari](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20iPad%20Safari.png "iPad Safari")</kbd>
 
+Op de een iPad met Safari ging het enorm goed.  
+Dit is een afbeelding van de input type=color die open staat.  
+Alles wordt weergeven, de border-radius van de verschillende elementen missen echter wel.
+De javascript werkt ook uitstekend.
+
 <kbd>![iPhone Safari](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20iPhone%20Safari.png "iPhone Safari")</kbd>
+
+Op de iPhone ging alles kapot!
+De javascript werkte wel, maar de rest wilde niet.
+De gigantische blauwe plek is de emoji die eigenlijk achter de main had moeten staan, die zich toch maar naar voren heeft geduwd.  
+Dit heb ik uiteindelijk opgelost door met behulp van een mediaquery de footer weg te halen zowel als de ::before emoji.  
+Uiteindelijk heb ik hier dus veel van geleerd en dit kunnen oplossen.  
+Ook te zien is het input-type-color die zich hersteld naar een input-type-text aangezien color niet werd ondersteund door deze vroeger iPhone versie van Safari.
+Maar alleen afbeeldingen van dingen die werken is ook niet leuk :-)
 
 <kbd>![iPhone Safari2](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20iPhone%20Safari2.png "iPhone Safari2")</kbd>
 
+Dit is poging twee op een nieuwere iPhone.  
+De footer, emoji en die drama is nu allemaal weg en dus opgelost.  
+De applicatie kan op deze manier goed gebruikt worden en Safari heeft op deze versie zelfs ondersteuning voor input-type-color.
+
 <kbd>![Pixel Firefox](https://github.com/DanielvandeVelde/browser-technologies-1920/blob/master/images/BT%20Pixel%20FireFox.png "Pixel FireFox")</kbd>
+
+Op de allereerste Pixel op een vroege versie van Firefox leek alles gewoon te werken.  
+Nadat de eerste kinken uit de kabel waren door alles op te lossen in onder andere (mobiele) Safari leek het voor de andere (mobiele) browsers ook prima te werken.
+
+#### Screenreader
+
+Voor de screenreader ben ik geen hele rare dingen tegengekomen.  
+Een aantal dingen die mij opvielen waren dat er eerst de ::before emoji's voorgelezen werden van de button voordat de tekst zelf werd voorgelezen.  
+En dat in de `<svg>`'s niet alleen de tekst van de link wordt voorgelezen maar ook nog eens de titel van de `<svg>`.  
+Overigens wordt in de type=color inputs wel de hexcode voorgelezen als een percentage van rood, geel en blauw maar wanneer deze normaal gesproken een hexcode voorleest doet hij dit wel door "#ffffff" te zeggen, dit zou iets zijn wat ik misschien nog zou kunnen veranderen als ik daar de tijd voor heb.
+Al met al niet heel storend, maar wel iets wat opviel.
 
 ### To-do / Wishlist opdracht 2
 
@@ -392,3 +477,13 @@ Browser-research
 - [x] Browser testing
 - [x] Verbetering a.d.h.v. browser testing
   </details>
+
+### Conclusie beoordeling
+
+Ik heb mij in eerste instantie gericht op een sterke user-experience met name in de kale HTML versie.  
+De CSS voegt een aantal mogelijkheden toe waaronder styling, een print-stylesheet en interactie.
+De Javascript voegt extra functionaliteiten toe, waarvan alle een sterke accesibility hebben.
+Op deze manier probeer ik progressive enhancement zo goed mogelijk toe te voegen.
+Daarnaast had ik ook de mogelijkheid om feature detectie toe te passen maar dit heb ik niet heel erg nodig gehad.  
+Ik heb bijvoorbeeld geen @supports gebruikt maar wel meerdere malen een fall-back ingezet voor wanneer bijvoorbeeld een css property niet beschikbaar zou zijn.
+Ik ben trots op een toffe app die op vrijwel alle devices beschikbaar is vanaf kale HTML tot aan de meest enhanced CSS+Javascript.
