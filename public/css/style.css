@@ -162,7 +162,8 @@ html:hover button:last-child::before {
   content: "\1F60C";
 }
 
-main:hover button:last-child::before {
+main:hover button:last-child::before,
+aside:hover button:last-child::before {
   content: "\1F60A";
 }
 
