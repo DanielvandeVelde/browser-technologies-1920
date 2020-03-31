@@ -143,7 +143,15 @@ function othersCreated() {
 
 function relatedShirts(queries, id) {
   let tshirt =
-    `<svg width="150px" height="150px"><defs><mask id="smallCut` +
+    `<svg width="150px" height="150px">  <a href="/?shirtColor=${encodeURIComponent(
+      queries.shirtColor
+    )}&shirtNeck=${encodeURIComponent(
+      queries.shirtNeck
+    )}&shirtPattern=${encodeURIComponent(
+      queries.shirtPattern
+    )}&patternColor=${encodeURIComponent(
+      queries.patternColor
+    )}"><defs><mask id="smallCut` +
     id +
     `"><rect width="150" height="150" fill="white"></rect>`;
   if (queries.shirtNeck == "v") {
@@ -199,7 +207,7 @@ function relatedShirts(queries, id) {
       <circle cy="128" cx="37" r="5" style="fill:${queries.patternColor}"></circle>
       </g>`;
   }
-  tshirt += `</svg>`;
+  tshirt += `<a></svg>`;
 
   return tshirt;
 }
