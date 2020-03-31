@@ -261,18 +261,18 @@ Er zitten lijsten in mijn lijst objecten. Dit is blijkbaar ook iets wat niet cor
 
 ### Todo
 
-- [ ] Labels & buttons voor searchbar
-- [ ] Content voor de `<a>`-items
-- [ ] Geen `<ul>` in de `<li>`'s
-- [ ] afbeeldingen omgezet naar .svg voor sneller laden (ook lokaal hosten)
-- [ ] Kleiner CSS-bestand zodat afbeeldingen e.d. sneller worden geladen
-- [ ] Contrast verhoogt tussen achtergrond- en textkleuren
-- [ ] Minified css
+- [x] Labels & buttons voor searchbar
+- [x] Content voor de `<a>`-items
+- [x] Geen `<ul>` in de `<li>`'s
+- [x] lokaal hosten en afbeeldingen kleiner gemaakt
+- [x] Kleiner CSS-bestand zodat afbeeldingen e.d. sneller worden geladen
+- [x] Contrast verhoogt tussen achtergrond- en textkleuren
+- [x] Minified css
 - [ ] Mobile-friendly
-- [ ] :focus-state duidelijker maken (mogelijk hetzelfde als :hover)
-- [ ] prebuilden van minify/uglify en compression van bestanden
+- [x] :focus-state duidelijker maken (mogelijk hetzelfde als :hover)
+- [x] prebuilden van minify/uglify en compression van bestanden
 - [ ] Geen arrow functions
-- [ ] fallback voor geen javascript
+- [x] fallback voor geen javascript
 
 </details>
 
