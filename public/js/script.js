@@ -122,7 +122,9 @@ function shirtPainter(queries) {
 function othersCreated() {
   const body = document.body,
     footer = document.createElement("footer"),
-    ul = document.createElement("ul");
+    ul = document.createElement("ul"),
+    h2 = document.createElement("h2"),
+    h2text = document.createTextNode("Others created");
   const li = [],
     innerSVG = [];
 
@@ -133,6 +135,8 @@ function othersCreated() {
     ul.appendChild(li[i]);
   }
 
+  h2.appendChild(h2text);
+  footer.appendChild(h2);
   footer.appendChild(ul);
   body.appendChild(footer);
 }
