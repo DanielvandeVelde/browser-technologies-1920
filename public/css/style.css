@@ -163,7 +163,6 @@ html:hover button:last-child::before {
 
 main {
   margin: 1em 0;
-  flex: 0;
 }
 
 main:hover button:last-child::before {
