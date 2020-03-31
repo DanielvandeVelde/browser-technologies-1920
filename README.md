@@ -369,6 +369,10 @@ Angezien dit niet relevant is voor de main-feature van de pagina voeg ik deze la
 Deze 'created by others' is een samenstelling van 5 verschillende shirts die gemaakt worden met willekeurige kleuren en patroonkeuzes.
 Deze `<svg>`'s zijn ook volledig accesible door het toe te voegen van `<title>`-elementen zowel als tekst binnenin de `<a>`.
 
+### Research
+
+Browser-research
+
 ### To-do / Wishlist opdracht 2
 
 - [x] Pure HTML core-features
@@ -376,6 +380,6 @@ Deze `<svg>`'s zijn ook volledig accesible door het toe te voegen van `<title>`-
 - [x] JS enhancement
 - [x] Onderzoek feature detection
 - [x] Implementatie van feature detection onderzoek
-- [ ] Browser testing
-- [ ] Verbetering a.d.h.v. browser testing
+- [x] Browser testing
+- [x] Verbetering a.d.h.v. browser testing
   </details>
