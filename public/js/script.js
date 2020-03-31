@@ -122,73 +122,80 @@ function shirtPainter(queries) {
 function othersCreated() {
   const body = document.body,
     footer = document.createElement("footer"),
-    ul = document.createElement("ul"),
-    li1 = document.createElement("li"),
-    innerSVG1 = relatedShirts(createData()),
-    li2 = document.createElement("li"),
-    innerSVG2 = relatedShirts(createData()),
-    li3 = document.createElement("li"),
-    innerSVG3 = relatedShirts(createData()),
-    li4 = document.createElement("li"),
-    innerSVG4 = relatedShirts(createData());
+    ul = document.createElement("ul");
+  const li = [],
+    innerSVG = [];
 
-  li1.insertAdjacentHTML("afterbegin", innerSVG1);
-  ul.appendChild(li1);
-  li2.insertAdjacentHTML("afterbegin", innerSVG2);
-  ul.appendChild(li2);
-  li3.insertAdjacentHTML("afterbegin", innerSVG3);
-  ul.appendChild(li3);
-  li4.insertAdjacentHTML("afterbegin", innerSVG4);
-  ul.appendChild(li4);
+  for (var i = 0; i < 5; i++) {
+    li[i] = document.createElement("li");
+    innerSVG[i] = relatedShirts(createData(), i);
+    li[i].insertAdjacentHTML("afterbegin", innerSVG[i]);
+    ul.appendChild(li[i]);
+  }
+
   footer.appendChild(ul);
   body.appendChild(footer);
 }
 
-function relatedShirts(queries) {
-  let tshirt = `<svg width="150px" height="150px"><a href="#"><defs><mask id="cutNeck"><rect width="400" height="275" fill="white"></rect>`;
+function relatedShirts(queries, id) {
+  let tshirt =
+    `<svg width="150px" height="150px"><defs><mask id="smallCut` +
+    id +
+    `"><rect width="150" height="150" fill="white"></rect>`;
   if (queries.shirtNeck == "v") {
-    tshirt += `<rect transform="translate(40,-165) rotate(45 60 60)" width="75" height="75" y="25" x="175" fill="black"></rect>`;
+    tshirt += `<rect transform="rotate(45 60 60)" width="50" height="50" y="-25" x="0" fill="black"/>`;
   } else {
-    tshirt += `<circle cy="0" cx="50%" r="50" fill="black"></circle>`;
+    tshirt += `<circle cy="0" cx="50%" r="25" fill="black"></circle>`;
   }
-  tshirt += `</mask></defs>
+  tshirt +=
+    `</mask></defs>
   <g id="shirt">
-    <rect height="250" width="200" y="16.453125" x="97.5" style="fill:${queries.shirtColor}" mask="url(#cutNeck)"></rect>
-    <rect transform="rotate(59.536865234375 79.49259948730466,86.21015930175783)" height="100" width="90" y="32.710163" x="29.492602" style="fill:${queries.shirtColor}"></rect>
-    <rect transform="rotate(-60 315.49261474609375,79.7101593017578) "height="100" width="90" y="29.710163" x="270.492602" style="fill:${queries.shirtColor}"></rect>
+    <rect height="150" width="100" y="10" x="25" style="fill:${queries.shirtColor}" mask="url(#smallCut` +
+    id +
+    `)"></rect>
+    <rect transform="rotate(59.536865234375 79.49259948730466,86.21015930175783)" height="50" width="45" y="94" x="-13" style="fill:${queries.shirtColor}"></rect>
+    <rect transform="rotate(-60 315.49261474609375,79.7101593017578) "height="50" width="45" y="-120" x="235" style="fill:${queries.shirtColor}"></rect>
     </g>`;
   if (queries.shirtPattern == "horizontal stripes") {
-    tshirt += `
+    tshirt +=
+      `
     <g id="pattern">
-      <rect height="25" width="200" y="16.45" x="97.5" style="fill:${queries.patternColor}" mask="url(#cutNeck)"></rect>
-      <rect height="25" width="200" y="65" x="97.5" style="fill:${queries.patternColor}"></rect>
-      <rect height="25" width="200" y="115" x="97.5" style="fill:${queries.patternColor}"></rect>
-      <rect height="25" width="200" y="165" x="97.5" style="fill:${queries.patternColor}"></rect>
-      <rect height="25" width="200" y="215" x="97.5" style="fill:${queries.patternColor}"></rect>
+      <rect height="12" width="100" y="20" x="25" style="fill:${queries.patternColor}" mask="url(#smallCut` +
+      id +
+      `)"></rect>
+      <rect height="12" width="100" y="45" x="25" style="fill:${queries.patternColor}"></rect>
+      <rect height="12" width="100" y="70" x="25" style="fill:${queries.patternColor}"></rect>
+      <rect height="12" width="100" y="95" x="25" style="fill:${queries.patternColor}"></rect>
+      <rect height="12" width="100" y="120" x="25" style="fill:${queries.patternColor}"></rect>
     </g>`;
   } else if (queries.shirtPattern == "vertical stripes") {
-    tshirt += `
+    tshirt +=
+      `
         <g id="pattern">
-      <rect height="250" width="25" y="16.45" x="110" style="fill:${queries.patternColor}"></rect>
-      <rect height="250" width="25" y="16.45" x="160" style="fill:${queries.patternColor}" mask="url(#cutNeck)"></rect>
-      <rect height="250" width="25" y="16.45" x="210" style="fill:${queries.patternColor}" mask="url(#cutNeck)"></rect>
-      <rect height="250" width="25" y="16.45" x="260" style="fill:${queries.patternColor}"></rect>
+      <rect height="150" width="12" y="10" x="32" style="fill:${queries.patternColor}"></rect>
+      <rect height="150" width="12" y="10" x="57" style="fill:${queries.patternColor}" mask="url(#smallCut` +
+      id +
+      `)"></rect>
+      <rect height="150" width="12" y="10" x="82" style="fill:${queries.patternColor}" mask="url(#smallCut` +
+      id +
+      `)"></rect>
+      <rect height="150" width="12" y="10" x="107" style="fill:${queries.patternColor}"></rect>
       </g>`;
   } else if (queries.shirtPattern == "dots") {
     tshirt += `
         <g id="pattern">
-      <circle cy="75" cx="50" r="10" style="fill:${queries.patternColor}"></circle>
-      <circle cy="50" cx="100" r="10" style="fill:${queries.patternColor}"></circle>
-      <circle cy="35" cx="250" r="10" style="fill:${queries.patternColor}"></circle>
-      <circle cy="129" cx="117" r="10" style="fill:${queries.patternColor}"></circle>
-      <circle cy="169" cx="269" r="10" style="fill:${queries.patternColor}"></circle>
-      <circle cy="100" cx="325" r="10" style="fill:${queries.patternColor}"></circle>
-      <circle cy="250" cx="250" r="10" style="fill:${queries.patternColor}"></circle>
-      <circle cy="162" cx="175" r="10" style="fill:${queries.patternColor}"></circle>
-      <circle cy="235" cx="115" r="10" style="fill:${queries.patternColor}"></circle>
+      <circle cy="48" cx="5" r="5" style="fill:${queries.patternColor}"></circle>
+      <circle cy="35" cx="30" r="5" style="fill:${queries.patternColor}"></circle>
+      <circle cy="22" cx="105" r="5" style="fill:${queries.patternColor}"></circle>
+      <circle cy="75" cx="40" r="5" style="fill:${queries.patternColor}"></circle>
+      <circle cy="95" cx="115" r="5" style="fill:${queries.patternColor}"></circle>
+      <circle cy="60" cx="142" r="5" style="fill:${queries.patternColor}"></circle>
+      <circle cy="135" cx="105" r="5" style="fill:${queries.patternColor}"></circle>
+      <circle cy="172" cx="67" r="5" style="fill:${queries.patternColor}"></circle>
+      <circle cy="128" cx="37" r="5" style="fill:${queries.patternColor}"></circle>
       </g>`;
   }
-  tshirt += `</a></svg>`;
+  tshirt += `</svg>`;
 
   return tshirt;
 }

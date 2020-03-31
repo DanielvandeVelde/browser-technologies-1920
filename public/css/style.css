@@ -110,11 +110,18 @@ button:hover {
   transform: translate(0, 0);
 }
 
-button:last-child::before {
-  content: "😔";
+button:before {
   display: inline-block;
   font-size: 2em;
   padding-right: 0.5em;
+}
+
+button:first-child::before {
+  content: "\1F4BE";
+}
+
+button:last-child::before {
+  content: "\1F614";
 }
 
 html:hover button:last-child::before {

@@ -21,6 +21,10 @@ footer ul {
   display: flex;
 }
 
+footer ul li svg {
+  padding: 0 0.5em;
+}
+
 @media only screen and (max-width: 720px) {
   aside {
     display: none;
