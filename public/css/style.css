@@ -37,7 +37,6 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  z-index: 99;
 }
 
 header {
@@ -182,7 +181,7 @@ html:before {
   opacity: 0.5;
   right: -10vw;
   bottom: -20vh;
-  z-index: 0;
+  z-index: -1;
   -webkit-transform: rotateZ(20deg);
   -ms-transform: rotate(20deg);
   transform: rotateZ(20deg);
