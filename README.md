@@ -157,7 +157,7 @@ Alle testen die ik uitvoer vinden plaats op een Windows computer met Google Chro
 
 ### Afbeeldingen
 
-Afbeeldingen mogen iets kleiner zijn tom er voor te zorgen dat deze sneller laden.
+Afbeeldingen mogen iets kleiner zijn om er voor te zorgen dat deze sneller laden.
 Verder is het niet een heel groot probleem dat ik gebruik maak van een enkele achtergrond afbeelding.
 
 ### Custom Fonts
@@ -485,5 +485,5 @@ De CSS voegt een aantal mogelijkheden toe waaronder styling, een print-styleshee
 De Javascript voegt extra functionaliteiten toe, waarvan alle een sterke accesibility hebben.
 Op deze manier probeer ik progressive enhancement zo goed mogelijk toe te voegen.
 Daarnaast had ik ook de mogelijkheid om feature detectie toe te passen maar dit heb ik niet heel erg nodig gehad.  
-Ik heb bijvoorbeeld geen @supports gebruikt maar wel meerdere malen een fall-back ingezet voor wanneer bijvoorbeeld een css property niet beschikbaar zou zijn.
+Ik heb bijvoorbeeld geen @supports gebruikt maar wel meerdere malen een fall-back ingezet voor wanneer bijvoorbeeld een css property niet beschikbaar zou zijn, hetzelfde voor de HTML en de JS.  
 Ik ben trots op een toffe app die op vrijwel alle devices beschikbaar is vanaf kale HTML tot aan de meest enhanced CSS+Javascript.
