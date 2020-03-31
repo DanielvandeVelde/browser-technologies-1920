@@ -69,4 +69,8 @@ footer ul li {
   form {
     border-radius: 1em;
   }
+
+  footer {
+    display: none;
+  }
 }
