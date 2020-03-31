@@ -339,9 +339,13 @@ Dit is iets wat ik mogelijk op de server nog kan veranderen voor pure HTML en wa
 
 ### CSS
 
-Mooi gestyled, mogelijk aparte CSS voor script en `<noscript>`
-Misschien met behulp van de checkboxes e.d. het shirt al laten zien voordat er op de knop geklikt wordt om 'm te versturen.
-Print-stylesheet is ook een must
+De CSS styled de pagina zodat het makkelijker te zien is wat er allemaal aan de hand is.  
+De header wordt vergroot en makkelijker leesbaar. Daarnaast worden de knoppen groter en krijgen een gele kleur.  
+Met behulp van een aantal :hover elementen zit er ook een leuke interactie verstopt in de 'submit'-knop voor de browsers die dit ondersteunen.
+
+In de creator zorgt de CSS voor een overzichtelijk geheel door de uitgekozen kleuren nog eens te laten zien in tekst en door gebruik van de desbetreffende kleur zelf.  
+Tevens voegt de CSS print-stylesheet een extra laag toe aan het printen van de pagina door hier een aantal web onderdelen weg te halen en enkel het shirt in het midden te houden.  
+Daarnaast is er ook een optie voor de gebruiker om na het printen zijn naam in te vullen en deze dus extra persoonlijk te maken.
 
 ### HTML / CSS / Javascript
 

@@ -160,8 +160,11 @@ html:hover button:last-child::before {
   content: "\1F60C";
 }
 
-main:hover button:last-child::before,
-aside:hover button:last-child::before {
+main {
+  margin: 1em 0;
+}
+
+main:hover button:last-child::before {
   content: "\1F60A";
 }
 
