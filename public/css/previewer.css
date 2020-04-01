@@ -23,6 +23,7 @@ aside {
   justify-content: center;
   border-left: 1px solid black;
   flex-direction: column;
+  box-shadow: 0.5em 0.5em 0.25em 0em rgba(0, 0, 0, 0.25);
 }
 
 footer {
