@@ -476,6 +476,7 @@ Al met al niet heel storend, maar wel iets wat opviel.
 - [x] Implementatie van feature detection onderzoek
 - [x] Browser testing
 - [x] Verbetering a.d.h.v. browser testing
+- [ ] Perfecte print-stylesheet op alle browsers
   </details>
 
 ### Conclusie beoordeling
