@@ -11,6 +11,14 @@ header {
   display: none;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
 main,
 aside {
   width: 100%;
@@ -24,6 +32,10 @@ main {
 aside {
   border: 1px solid black;
   border-top: none;
+}
+
+#printButton {
+  display: none;
 }
 
 body:before {
